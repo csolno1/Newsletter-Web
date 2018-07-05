@@ -1,0 +1,301 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <title>index</title>
+        <meta charset="utf-8">
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'news/css/login.css' %}">
+    </head>
+    <body>
+        <!-- This is navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">SM Studio</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-iftem active">
+                        <a class="nav-link" href="#">
+                            <img
+                                src="{% static 'news/Image/home_black_18dp.png' %}"
+                                width="25"
+                                height="25"
+                                class="d-inline-block align-top"
+                                alt="">
+                            Home
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <button
+                            id="sign-in-btn"
+                            type="button"
+                            class="btn btn-primary btn-lg"
+                            role="button"
+                            data-toggle="modal"
+                            data-target="#login-modal">
+                            <img
+                                src="{% static 'news/Image/face_black_18dp.png' %}"
+                                width="25"
+                                height="25"
+                                class="d-inline-block align-top">
+                            sign in</button>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input
+                        class="form-control mr-sm-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Begin#Login Modal -->
+        <div
+            class="modal fade"
+            id="login-modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+            style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+                            <div class="modal-body">
+                                <div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-login-msg">Type your username and password.</span>
+                                </div>
+                                <input
+                                    id="login_username"
+                                    class="form-control"
+                                    type="text"
+                                    placeholder="Username (type ERROR for error effect)"
+                                    required="required">
+                                <input
+                                    id="login_password"
+                                    class="form-control"
+                                    type="password"
+                                    placeholder="Password"
+                                    required="required">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                                </div>
+                                <div>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End # Login Form -->
+
+                        <!-- Begin | Register Form -->
+                        <form id="register-form" style="display:none;">
+                            <div class="modal-body">
+                                <div id="div-register-msg">
+                                    <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-register-msg">Register an account.</span>
+                                </div>
+                                <input
+                                    id="register_username"
+                                    class="form-control"
+                                    type="text"
+                                    placeholder="Username (type ERROR for error effect)"
+                                    required="required">
+                                <input
+                                    id="register_email"
+                                    class="form-control"
+                                    type="text"
+                                    placeholder="E-Mail"
+                                    required="required">
+                                <input
+                                    id="register_password"
+                                    class="form-control"
+                                    type="password"
+                                    placeholder="Password"
+                                    required="required">
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                </div>
+                                <div>
+                                    <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Register Form -->
+
+                    </div>
+                    <!-- End # DIV Form -->
+
+                </div>
+            </div>
+        </div>
+        <!-- END#Login Modal -->
+
+        <!-- This is nav -->
+        <ul class="nav nav-tabs flex-column">
+            <li class="nav-item">
+                <h1 class="display-2">
+                    <a class="nav-link" href="{% url 'news:index' %}">News</a>
+                </h1>
+            </li>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#">World</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#">Political</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#">Tech</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#">Science</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#">Favorite</a>
+                </li>
+            </ul>
+    </ul>
+
+    <!-- BEGIN#News information -->
+    <div class="card-columns">
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <img class="card-img-top" src="{% static 'news/Image/Alfa.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <img class="card-img-top" src="{% static 'news/Image/Alfa.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <img class="card-img-top" src="{% static 'news/Image/Alfa.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+
+        </div>
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <img class="card-img-top" src="{% static 'news/Image/Alfa.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+
+        </div>
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <img class="card-img-top" src="{% static 'news/Image/Alfa.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="card">
+            <a class="nav-link text-dark" href="#">
+                <img class="card-img-top" src="{% static 'news/Image/Alfa.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">This is the news' title may be Alfa?</h5>
+                    <p class="card-text">This is news' text, show more details about the news</p>
+                    <p>1908-03-31</p>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- END#News information -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script> -->
+    <script src="{% static 'news/js/bootstrap.js' %}"></script>
+    <script src="{% static 'news/js/login_.js' %}"></script>
+</body>
+
+</html>
