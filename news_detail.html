@@ -1,171 +1,198 @@
 <!doctype html>
 <html>
 
-<head>
-    <title>News</title>
-    <meta charset="utf-8">
-    <link rel="icon" href="images/icon-32.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/login.css" type="text/css">
-    <link href="css/starter-template.css" rel="stylesheet">
-    <link href="css/blog.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f6f6f6;
-        }
+    <head>
+        <title>News</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/icon-32.png" sizes="32x32" type="image/png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="css/starter-template.css" rel="stylesheet">
+        <link href="css/blog.css" rel="stylesheet">
+        <link href="css/news_detail.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #f6f6f6;
+            }
 
-        main {
-            background-color: #ffffff;
-        }
+            main {
+                background-color: #ffffff;
+            }
 
-        #myTitle {
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid transparent;
-            border-top-left-radius: 0.25rem;
-            border-top-right-radius: 0.25rem;
-            border-radius: 0.25rem;
-        }
+            #myTitle {
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                border: 1px solid transparent;
+                border-top-left-radius: 0.25rem;
+                border-top-right-radius: 0.25rem;
+                border-radius: 0.25rem;
+            }
 
-        h5 {
-            color: #007bff;
-        }
-    </style>
-</head>
+            h5 {
+                color: #007bff;
+            }
+        </style>
+    </head>
 
-<body>
-    <!-- This is navbar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" style="background-color: #ffffff !important">
-        <div class="container">
-            <a class="navbar-brand" href="#">News</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <body>
+        <!-- This is navbar -->
+        <nav
+            class="navbar navbar-expand-md navbar-light bg-light fixed-top"
+            style="background-color: #ffffff !important">
+            <div class="container">
+                <a class="navbar-brand" href="#">News</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarsExampleDefault"
+                    aria-controls="navbarsExampleDefault"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">
-                            <img src="images/home_black_18dp.png" width="20" height="20" class="d-inline-block align-top" alt="alt">主页
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <!-- The diff between login and unlogin(This is unlogin) -->
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="images/face_black_18dp.png" width="20" height="20" class="d-inline-block align-top" alt="alt">账户
-                            <span class="sr-only">(current)</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown0">
-                            <a class="dropdown-item" href="login.html">登录</a>
-                            <a class="dropdown-item" href="register.html">注册</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mySearch">搜索</button>
-                </form>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">
+                                <img
+                                    src="images/home_black_18dp.png"
+                                    width="20"
+                                    height="20"
+                                    class="d-inline-block align-top"
+                                    alt="alt">主页
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <!-- The diff between login and unlogin(This is unlogin) -->
+                        <li class="nav-item dropdown active">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="dropdown0"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                <img
+                                    src="images/face_black_18dp.png"
+                                    width="20"
+                                    height="20"
+                                    class="d-inline-block align-top"
+                                    alt="alt">账户
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown0">
+                                <a class="dropdown-item" href="login.html">登录</a>
+                                <a class="dropdown-item" href="register.html">注册</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input
+                            class="form-control mr-sm-2"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search">
+                        <button
+                            class="btn btn-outline-primary my-2 my-sm-0"
+                            type="submit"
+                            onclick="mySearch">搜索</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </nav>
-    <main class="container">
-        <div class="row">
+        </nav>
+        <main class="container">
+            <div class="row">
 
-            <div class="col-md-8 order-md-1">
-                <div class="row">
-                    <div class="blog-post">
-                        <h2 class="blog-post-title">Sample Title</h2>
-                        <p class="blog-post-meta">
-                            April 27,1998 by Simon
-                        </p>
-                        <hr>
-                        <p>newswsldjfjweiojgeowbjnodnvojesojf sidfjioajfoewijfowjifoiwef fsjadjfniojweoifjoweifjoweifjodfsghdfgwerffffffffffffffffffesfse
-                        </p>
-                        <hr>
+                <div class="col-md-9 order-md-1">
+                    <div class="p-3">
+                        <div class="row p-3 article">
+                            <div class="blog-post">
+                                <h2 class="blog-post-title">Sample Title</h2>
+                                <p class="blog-post-meta">
+                                    April 27,1998 by Simon
+                                </p>
+                                <hr>
+                                <p>newswsldjfjweiojgeowbjnodnvojesojf sidfjioajfoewijfowjifoiwef
+                                    fsjadjfniojweoifjoweifjoweifjodfsghdfgwerffffffffffffffffffesfse
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- Like apart begin -->
+                        <div class="row p-3 mb-3">
+                            <div class="col-5"></div>
+                            <div class="col-3">
+                                <a href="#love">
+                                    <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
+                                </a>
+                                <span>23</span>人收藏
+                            </div>
+                            <div class="col-5"></div>
+                        </div>
+                        <!-- Like apart end -->
+                        <!-- Comment apart begin -->
+                        <div class="p-3 mb-3">
+                            <h2>评 论</h2>
+                            <div class="row">
+                                <div class="input-group mb-3 comment-form">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Recipient's username"
+                                        aria-label="Recipient's username"
+                                        aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment list begin -->
+                        <div class="mb-3 p-2">
+
+                            <hr>
+                            <div>
+                                <p>
+                                    <span>UserName</span>▪
+                                    <em>15 分钟前</em>
+                                </p>
+                                <p>这是评论内容哈哈哈</p>
+                            </div>
+                            <div>
+                                <span>UserNamehaha</span>▪
+                                <em>2 天前</em>
+                                <p>这还是评论内容呵呵</p>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Comment list end -->
+                    <!-- Comment apart end -->
                 </div>
-                <!-- Like apart begin -->
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class "col-4"="class" col-4 "">
-                        <a href="#love">
-                            <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
-                        </a>
-                        <span>23</span>人收藏
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <!-- Like apart end -->
-                <!-- Comment apart begin -->
-                <h2>评 论</h2>
-                <div class="row">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">提交</button>
+                <div class="col-md-3 order-md-2 mb-4 p-3">
+                    <div class="love-list p-4">
+                        <h4>
+                            <span class="text-muted">您感兴趣</span>
+                        </h4>
+                        <div class="container">
+                            <div class="row">
+                                <a href="#">article</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">article</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">article</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                <!-- Comment list begin -->
-                <div>
-                    <div>
-                        <p>
-                            <span>UserName</span>▪
-                            <em>15 分钟前</em>
-                        </p>
-                        <p>这是评论内容哈哈哈</p>
-                    </div>
-                    <div>
-                        <span>UserNamehaha</span>▪
-                        <em>2 天前</em>
-                        <p>这还是评论内容呵呵</p>
-                    </div>
-                </div>
-                <!-- Comment list end -->
-                <!-- Comment apart end -->
             </div>
-            <div class="col-md-4 order-md-2 mb-4">
-                <h4>
-                    <span class="text-muted">Your cart</span>
-                </h4>
-                <ul class="list-group mb-3">
-                    <li>
-                        <div>
-                        </div>
-                        <span class="text-muted">$12</span>
-                    </li>
-                    <li>
-                        <div>
-                        </div>
-                        <span class="text-muted">$8</span>
-                    </li>
-                    <li>
-                        <div>
-                        </div>
-                        <span class="text-muted">$5</span>
-                    </li>
-                    <li>
-                        <div class="text-success">
-                        </div>
-                        <span class="text-success">-$5</span>
-                    </li>
-                    <li>
-                        <span>Total (USD)</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
+        </main>
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
 
 </html>
