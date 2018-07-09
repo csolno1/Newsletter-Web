@@ -4,10 +4,10 @@
 <head>
 	<title>News</title>
 	<meta charset="utf-8">
-	<link rel="icon" href="images/icon-32.png" sizes="32x32" type="image/png">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/login.css" type="text/css">
-	<link href="css/starter-template.css" rel="stylesheet">
+	<link rel="icon" href="{% static 'news/images/icon-32.png' %}" sizes="32x32" type="image/png">
+	<link rel="stylesheet" href="{% static 'news/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'news/css/login.css' %}" type="text/css">
+	<link href="{% static 'news/css/starter-template.css' %}" rel="stylesheet">
 	<style>
 		body {
 			background-color: #f6f6f6;
@@ -41,19 +41,19 @@
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="index.html">
-							<img src="images/home_black_18dp.png" width="20" height="20" class="d-inline-block align-top" alt=>Home
+						<a class="nav-link" href="{% static 'news/index.html' %}">
+							<img src="{% static 'news/images/home_black_18dp.png' %}" width="20" height="20" class="d-inline-block align-top" alt=>Home
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img src="images/face_black_18dp.png" width="20" height="20" class="d-inline-block align-top" alt=>Account
+							<img src="{% static 'news/images/face_black_18dp.png' %}" width="20" height="20" class="d-inline-block align-top" alt=>Account
 							<span class="sr-only">(current)</span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown0">
-							<a class="dropdown-item" href="login.html">Log in</a>
-							<a class="dropdown-item" href="register.html">Register</a>
+							<a class="dropdown-item" href="{% static 'news/login.html' %}">Log in</a>
+							<a class="dropdown-item" href="{% static 'news/register.html' %}">Register</a>
 						</div>
 					</li>
 				</ul>
@@ -81,7 +81,7 @@
 			<br/>
 			<li class="nav-item">
 				<h1 class="display-2">
-					<a id="myTitle" href="index.html">News</a>
+					<a id="myTitle" href="{% static 'news/index.html' %}">News</a>
 				</h1>
 			</li>
 			<ul class="nav justify-content-end">
@@ -107,7 +107,7 @@
 		<div class="card-columns">
 			<div class="card">
 				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="images/Alfa.jpg">
+					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
 					<div class="card-body">
 						<h5 class="card-title">This is the news' title may be Alfa?</h5>
 						<p class="card-text">This is news' text, show more details about the news</p>
@@ -129,7 +129,7 @@
 
 			<div class="card">
 				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="images/Alfa.jpg">
+					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
 					<div class="card-body">
 						<h5 class="card-title">This is the news' title may be Alfa?</h5>
 						<p class="card-text">This is news' text, show more details about the news</p>
@@ -141,7 +141,7 @@
 
 			<div class="card">
 				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="images/Alfa.jpg">
+					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
 					<div class="card-body">
 						<h5 class="card-title">This is the news' title may be Alfa?</h5>
 						<p class="card-text">This is news' text, show more details about the news</p>
@@ -152,7 +152,7 @@
 			</div>
 			<div class="card">
 				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="images/Alfa.jpg">
+					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
 					<div class="card-body">
 						<h5 class="card-title">This is the news' title may be Alfa?</h5>
 						<p class="card-text">This is news' text, show more details about the news</p>
@@ -163,7 +163,7 @@
 			</div>
 			<div class="card">
 				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="images/Alfa.jpg">
+					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
 					<div class="card-body">
 						<h5 class="card-title">This is the news' title may be Alfa?</h5>
 						<p class="card-text">This is news' text, show more details about the news</p>
@@ -175,7 +175,7 @@
 
 			<div class="card">
 				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="images/Alfa.jpg">
+					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
 					<div class="card-body">
 						<h5 class="card-title">This is the news' title may be Alfa?</h5>
 						<p class="card-text">This is news' text, show more details about the news</p>
@@ -188,9 +188,9 @@
 		</div>
 		<!-- END#News information -->
 	</main>
-	<script src="js/jquery-3.2.1.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{% static 'news/js/jquery-3.2.1.slim.min.js' %}"></script>
+	<script src="{% static 'news/js/popper.min.js' %}"></script>
+	<script src="{% static 'news/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>
