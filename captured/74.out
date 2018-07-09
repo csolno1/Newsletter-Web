@@ -1,0 +1,48 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260060073,	//vid
+							pic: '//n.sinaimg.cn/front/280/w600h480/20180709/UfUY-hezpzwt9740347.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/280/w600h480/20180709/UfUY-hezpzwt9740347.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频-两位老奶奶为抢孙子大打出手 警方：认错了娃',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/s/doc/2018-07-09/130168919811.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　原标题：宝宝内心很崩溃！#俩奶奶为抢孙子大打出手#，原来是认错了娃</p>
+<p>　　[宝宝内心很崩溃！#俩奶奶为抢孙子大打出手#，原来是认错了娃]7月6日，在广东江门一商场内，两名老奶奶为抢孩子大打出手，一位白衣老太坚称对方的小孩是自己的，直到自己孙子被抱过来才放手。警方通报称系认错人引发纠纷。网友：上一个被认错的存在，被带去打了一针……这已经不错了</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="老奶奶,认错,孙子,新闻" data-sudaclick="content_keywords_p">

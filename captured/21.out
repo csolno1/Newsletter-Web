@@ -1,0 +1,68 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260058571,	//vid
+							pic: '//n.sinaimg.cn/front/200/w640h360/20180709/q2-L-hezpzwt9437620.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/200/w640h360/20180709/q2-L-hezpzwt9437620.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频：马斯克下令赶制迷你潜艇 援救泰国被困少年足球队',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/w/doc/2018-07-09/122268919797.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　原标题：泰国洞穴救援，钢铁侠2天造好的“神器”已经在路上了</p>
+<p>　　昨天傍晚，泰国被困洞穴足球队第一批4名被困少年被成功救出。</p>
+<p>　　此前，美国著名科技企业家埃隆·马斯克表示要着手建造一个“小型潜水艇”来帮助救援。因此，昨天第一批队员营救成功消息一出，就有人称是埃隆·马斯克的“潜水艇”立功了。</p>
+<p>　　但这实际上是误传，因为<strong>马斯克造出的第一个“小型潜水艇”目前尚在飞往泰国的途中。</strong></p>
+<p>　　据泰国清莱府府尹那荣萨8日晚在发布会消息，昨天傍晚，泰国被困山洞的少年足球队员第一批4名少年已经被成功营救出洞。第5、6个孩子已转移至洞口最近的第三个洞室。泰军方官员透露，救援人员可能需要2天至4天才能将所有受困人员转移出洞。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/transform/162/w550h412/20180709/p_Gb-fzrwiaz8486187.jpg" alt="" data-mcesrc="http://n.sinaimg.cn/translate/320/w640h480/20180709/4Ra1-hezpzwu1040333.jpg" data-mceselected="1" data-link=""><span class="img_descr"></span></div>
+<p>　　全世界很多人都在远程关注着泰国的营救行动，其中就有著名的“网红”科技企业家埃隆·马斯克。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/translate/661/w268h393/20180709/SLCB-hezpzwu1040728.jpg" alt=""></div>
+<p>　　7 月 7 日，马斯克旗下的太空技术公司 SpaceX 和隧道建设公司 The Boring Company 派遣工程师到泰国。了解救援情况后，马斯克和他的团队认为，潜水艇是最有希望的设想。</p>
+<p>　　马斯克与spaceX供应商Wing公司在2天内完成了这种小型潜水艇设计和制造。马斯克在推文中称，这种小型潜水艇“非常轻，可以穿过狭窄的水道，而且极其坚固”，能容纳下一名小孩子，由两名潜水员就能牵引出洞穴。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/transform/184/w550h434/20180709/r3Ov-fzrwiaz8486190.jpg" alt="" data-mcesrc="http://n.sinaimg.cn/translate/294/w611h483/20180709/gB7T-hezpzwu1041210.jpg" data-mceselected="1" data-link=""><span class="img_descr"></span></div>
+<p>　　几个小时前，马斯克在推特上分享了在加州一所高中的游泳池中对这一小型潜水艇进行水下试验的视频。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/transform/287/w550h537/20180709/smQe-fzrwiaz8486200.jpg" alt="" data-mcesrc="http://n.sinaimg.cn/translate/465/w640h625/20180709/yoAa-hezpzwu1042466.jpg" data-mceselected="1" data-link=""><span class="img_descr"></span></div>
+<p>　　但有人称昨天傍晚泰国救援行动的进展，是马斯克的小型潜水艇参与了救援，实际上是误解。</p>
+<p>　　根据马斯克在推特透露的消息，目前这个小型潜水艇已经建造完毕，正在运往泰国的途中，预计需要个17 小时也就是在北京时间今天晚间抵达泰国。他称，希望能对救援起到作用，如果没用上，也希望对今后有所帮助。</p>
+<p>　　同时，网上有消息称，8日的救援中，孩子没有潜水而是躺在密闭的大型有氧塑料袋内，由潜水员带出洞穴。这一说法并没有得到官方的支持。据新华社报道，每名被困孩子带着防水面罩，由2名救援人员护送出来。</p>
+<p>　　同时网上流传的配图，也被泰国媒体辟谣称并非是此次泰国清莱府洞穴救援的现场图。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/transform/55/w550h305/20180709/6-a--hezpzwu1080564.jpg" alt="" data-mcesrc="http://n.sinaimg.cn/translate/133/w600h333/20180709/5mHl-hezpzwu1043515.jpg" data-mceselected="1" data-link=""><span class="img_descr"></span></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/translate/47/w350h497/20180709/uwNb-hezpzwu1046136.jpg" alt=""></div>
+				
+				<div class="wap_special" data-sudaclick="content_relativetopics_p">
+        <div class="tlt">点击进入专题：</div>
+	<a href="http://news.sina.cn/zt_d/tailfootball" target="_blank">被困洞中超两周 泰国少年足球队成员终于获救</a></div>
+  
+				
+				
+<p class="show_author">责任编辑：张玉 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="钢铁侠,泰国,潜水艇,新闻" data-sudaclick="content_keywords_p">

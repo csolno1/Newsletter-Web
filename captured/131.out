@@ -1,0 +1,47 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260072130,	//vid
+							pic: '//n.sinaimg.cn/front/200/w640h360/20180709/gJrJ-hezpzwu0870665.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/200/w640h360/20180709/gJrJ-hezpzwu0870665.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频：伊朗网红因舞蹈视频被捕后 她们“反了”',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/w/doc/2018-07-09/154868919867.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　[伊朗网红因舞蹈视频被捕后，她们“反了”！[米奇爱你]]因为在Instagram上传舞蹈视频，18岁的伊朗网红Maedeh Hojabri被捕，并于7月6日在国家电视台忏悔认错。然而，随着该事在社交媒体引发热议，不断有伊朗女性上传自己的跳舞视频，以示抗议，声援这些被冤枉的姑娘们。</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：余鹏飞 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="伊朗,网红,被捕,舞蹈,新闻" data-sudaclick="content_keywords_p">

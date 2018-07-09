@@ -1,0 +1,70 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 259792145,	//vid
+							pic: '//n.sinaimg.cn/front/750/w480h270/20180703/zq61-hevauxi3224158.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/750/w480h270/20180703/zq61-hevauxi3224158.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频：香港老奶奶为解放军擦汗',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/s/doc/2018-07-03/073168913167.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　原标题：香港老人为解放军擦汗，被港独分子恶毒咒骂围攻</p>
+<p class="">　　港独分子再次以自己下作的言行引发了众怒，让大多数香港民众看清了他们真正的面目与素质。</p>
+<p>　　昨天是中国共产党的97岁生日和香港回归21周年的纪念日，中国人民解放军驻港部队在这一天举行例行的军营开放日活动，加强与香港民众的接触，向香港民众展示文明之师威武之师的风貌。</p>
+<p>　　在昨天的开放日活动上，有一幕温馨的场景感动了无数人：一位香港的老人因心疼被暴晒的女兵，拿出纸巾悉心为她们擦拭脸上的汗水和雨水。这一幕让陆港两地无数网友为之动容，但在香港网友把这段视频传到网上之后，这位暖心的香港老人却招来了许多香港人的恶毒辱骂。。。。。。</p>
+<p>　　据了解，从6月30日起，中国人民解放军驻港部队将一连3日举行军营开放日活动，这个活动吸引了众多香港市民参观。驻港官兵为香港市民们带来了军乐队列队表演、近战刺杀操表演、陆空协同战斗演练等一系列精心准备的的精彩训练项目，向香港市民展示了中国人民解放军文明威武之师的形象，让他们感受到了祖国的强大，同时也拉近了与香港民众的距离。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/116/w550h366/20180702/0ufR-hespqry8765713.jpg" alt=""></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/116/w550h366/20180702/x8eB-hespqry8765793.jpg" alt=""></div>
+<p>　　香港昨日天气炎热并伴有阵雨，但这丝毫没有影响参加表演的驻港部队三军仪仗队女兵，她们头顶列日昂首挺胸，军姿飒爽，向香港民众展示着中国军人的风采，引得许多参观的香港市民合影。</p>
+<p>　　而在参观民众中，有一位老人掏出纸巾，小心翼翼的为站军姿的女兵擦拭脸上的汗水。在场的许多民众被这位老人所感染，纷纷拿起纸巾为站军姿的军人擦汗。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/689/w540h949/20180702/DKyu-hespqry8765851.jpg" alt=""></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/100/w540h360/20180702/LkLC-hespqry8765945.jpg" alt=""></div>
+<p>　　中国人民解放军驻港部队三军仪仗队女子仪仗排排长焦力拿出手机记录下了这一刻，焦力称，“以前在新闻里看到过香港市民为解放军打伞的报道，印象深刻，现在相似的画面真真切切地就发生在眼前，感触很深。”</p>
+<p>　　而在被在场记者问到给女兵擦汗的原因时，这位老人表示，“看到军人十分亲切，特别是看到这些女兵，就像自己的女儿一样。她们的衣服被雨淋湿了，脸上全都是汗，我很心疼，忍不住就上去给他们擦擦汗。”</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/293/w540h553/20180702/zbRS-hespqry8766041.jpg" alt=""></div>
+<p>　　这样一幕体现香港市民与驻港官兵鱼水深情的画面感动了无数人。在港独分子不时以冒犯性的言论和行为冲击两地爱国民众的底线引发不满时，这样的一则暖心画面又重燃了大家对香港未来的信心。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/287/w540h547/20180702/Q10h-hespqry8766104.jpg" alt=""></div>
+<p>　　然而，当有香港民众将这则视频发布到互联网上之后，这名暖心老人却招来许多“港渣”的辱骂！言语中不仅充斥着对于祖国和人民军队的污蔑，连对一个老者基本的尊重都没有！</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/741/w550h191/20180702/mB8G-hespqry8766149.jpg" alt=""></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/662/w550h112/20180702/MOVN-hespqry8766232.png" alt=""></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/676/w550h126/20180702/2IQa-hespqry8766271.png" alt=""></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/703/w550h153/20180702/Huis-hespqry8766311.jpg" alt=""></div>
+<p>　　所幸有更多的正义民众在骂人者的言论底下回帖表示谴责。港独分子再次以自己下作的言行引发了众怒，让大多数香港民众看清了他们真正的面目与素质。</p>
+<p>　　在昨日举行的庆祝香港回归祖国21周年七一酒会上，香港特区行政长官林郑月娥再次表示，在过去一年，特区政府坚持“一国”之本 ，在大事大非上，态度绝不模糊，对“触碰国家底线的行为绝不容忍”。她又形容政府“无畏无惧”，正确处理中央和特区的关系，加强各界对宪法、基本法、国家安全的认识。</p>
+<p>　　在两岸一家亲的大趋势下，相信那些常以“自由民主斗士”示人，表演欲旺盛的港独分子最终都会落得人人喊打的下场。</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：桂强 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="港独分子,驻港部队,老人,新闻" data-sudaclick="content_keywords_p">

@@ -1,0 +1,52 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+				<p>　　原标题：普吉岛天气阴雨，仍有游客乘船出海</p>
+			<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260059062,	//vid
+							pic: '//n.sinaimg.cn/front/532/w852h480/20180709/SYDv-hezpzwt9599880.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/532/w852h480/20180709/SYDv-hezpzwt9599880.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频：普吉岛天气阴雨 仍有游客乘船出海',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/s/doc/2018-07-09/123968919804.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　7月9日，泰国普吉岛天气阴雨，但查龙码头一早就有游客出海，当地旅游业运营已恢复正常。5日，两艘共载有百余名中国游客的船只在普吉海域倾覆，已致41名中国公民遇难。</p>
+<p>　　澎湃新闻记者 邓雅菲 史含伟&nbsp;</p>
+				
+				<div class="wap_special" data-sudaclick="content_relativetopics_p">
+        <div class="tlt">点击进入专题：</div>
+	<a href="http://news.sina.cn/zt_d/youchuan0705" target="_blank">泰国游船翻覆已致数十中国人遇难</a></div>
+  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="普吉岛,阴雨,出海,游客,新闻" data-sudaclick="content_keywords_p">

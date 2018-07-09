@@ -1,0 +1,52 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '',
+							pid: '1',
+							video_id: 260050722,	//vid
+							pic: '//n.sinaimg.cn/front/200/w640h360/20180709/euSC-hezpzwt7225215.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/200/w640h360/20180709/euSC-hezpzwt7225215.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频：潜水员怀抱小球员潜水1.5公里！3D全景还原首批4人获救过程',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/w/doc/2018-07-09/075068919648.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　[怪不得这么快！和原计划不同，泰国足球小子是这么被救出来的！]8日的救援中，在通过水淹区域时，没有让孩子潜水，而是躺在密闭的大型有氧塑料袋内，由潜水员带出洞穴。（环球时报泰国特派记者 孙广勇）</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/transform/38/w550h288/20180708/0Fdv-hezpzwt6605538.jpg" alt="" data-mcesrc="http://wx4.sinaimg.cn/large/75b1a75fly1ft2ssquzztj20m80bodh9.jpg" data-mceselected="1" data-link=""><span class="img_descr"></span></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/transform/55/w550h305/20180708/d-uS-hezpzwt6605669.jpg" alt="" data-mcesrc="http://wx4.sinaimg.cn/large/75b1a75fly1ft2ssssj5pj20m80cc75w.jpg" data-mceselected="1" data-link=""><span class="img_descr"></span></div>
+				
+				<div class="wap_special" data-sudaclick="content_relativetopics_p">
+        <div class="tlt">点击进入专题：</div>
+	<a href="http://news.sina.cn/zt_d/tailfootball" target="_blank">被困洞中超两周 泰国少年足球队成员终于获救</a></div>
+  
+				
+				
+<p class="show_author">责任编辑：张玉 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="泰国,足球小子,潜水员,新闻" data-sudaclick="content_keywords_p">

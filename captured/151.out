@@ -1,0 +1,55 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260029896,	//vid
+							pic: '//n.sinaimg.cn/sinacn15/750/w480h270/20180708/2d67-hezpzwt4986616.png',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/sinacn15/750/w480h270/20180708/2d67-hezpzwt4986616.png',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '实拍交警开套牌车当街被车主抓包 警方：已扣12分停职一个月',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://k.sina.cn/article_3952319369_meb939b8900100b40b.html?from=society'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　原标题：停在派出所门口的车不翼而飞，两年后发现竟是民警在开</p>
+<p>　　澎湃新闻记者 谢煜楠 实习生 邱晓芬&nbsp;</p>
+<p>　　近日，陕西西安，有网友发文称“交警开套牌车，市民车辆遭锁定称被盗抢车”引起热议。文章称2016年2月市民侯某（车主）的儿子小张遭人拦车，被抢未果。从派出所做完笔录后，停在门口车辆不翼而飞。2018年4月，车主儿子小张发现该车被交警雁塔大队民警王保云使用。</p>
+<p>　　随后小张向市公安局举报称民警王保云私自占有他人车辆，且车辆使用了变造的车牌，驾驶时间长达4个月。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/46/w550h296/20180709/7DN_-fzrwiaz8458074.jpg" alt=""><span class="img_descr"></span></div>
+<p>　　5月30日，西安市公安局信访回复：经核查，交警王保云所驾驶车辆违法、驾驶套牌车情况属实，随即将其停职给予处分，全支队通报。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/news/crawl/762/w550h212/20180709/h3fS-hezpzwt7195490.jpg" alt=""><span class="img_descr"></span></div>
+<p>　　7月6日，西安市交警支队警务督察科向澎湃新闻确认单位对王保云处分已履行。</p>
+<p>　　除了对交警王保云进行处罚，西安市公安局亦责成市交警支队检查。</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张义凌 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="澎湃新闻,派出所,民警,套牌车,新闻" data-sudaclick="content_keywords_p">

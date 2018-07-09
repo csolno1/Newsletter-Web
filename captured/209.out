@@ -1,0 +1,52 @@
+			<!-- 正文 start -->
+			<div class="article" id="article">
+							<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '',
+							pid: '1',
+							video_id: 260050563,	//vid
+							pic: '//n.sinaimg.cn/front/200/w640h360/20180709/IOrL-fzrwiaz8458884.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/200/w640h360/20180709/IOrL-fzrwiaz8458884.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '视频：日本遭遇罕见暴雨 桥墩垮塌车辆被淹没',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://video.sina.com.cn/p/news/w/doc/2018-07-09/073568919640.html'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　[环球网报道 记者 王欢]据日本NHK电视台7月9日报道，受梅雨锋面影响的西日本暴雨灾情9日在各地继续扩大，目前已造成共100人死亡，失联人员达到50人以上。在以日本中部和四国地区为中心的灾区，救援和搜寻行动持续进行。日本气象厅解除了所有大雨特别警报，但呼吁继续警惕地质灾害与河流泛滥。</p>
+<p>　　日本总务省消防厅9日发布统计数据称，截至8日晚间9点，因以西日本为中心的暴雨而到疏散点暂避的人数在15个府县共达约2.3万人。</p>
+<p>　　日本政府8日设立了紧急灾害对策总部。首相安倍晋三要求“希望全力救人救助和引导疏散”。</p>
+				
+				<div class="wap_special" data-sudaclick="content_relativetopics_p">
+        <div class="tlt">点击进入专题：</div>
+	<a href="http://news.sina.cn/news_zt/japanstorm1807" target="_blank">日本西部地区暴雨已致上百人死亡</a></div>
+  
+				
+				
+<p class="show_author">责任编辑：霍宇昂 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
+<div class="keywords" id="keywords" data-wbkey="失联,暴雨,死亡,锋面,新闻" data-sudaclick="content_keywords_p">
