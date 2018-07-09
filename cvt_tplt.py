@@ -71,6 +71,7 @@ class Index(Replaced):
                 </div>
             {% endfor %}
         </div>'''), 
+        (r"{% static 'news/(.*)\.html' %}", r"{% url '\1' %}"), 
     ]
 
 createTemplate(Index())
