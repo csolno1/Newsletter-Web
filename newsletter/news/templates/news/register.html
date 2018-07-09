@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en-us">
 
@@ -5,13 +6,13 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="images/icon-32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="{% static 'news/images/icon-32.png' %}" sizes="32x32" type="image/png">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/floating-labels.css">
+	<link rel="stylesheet" href="{% static 'news/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'news/css/floating-labels.css' %}">
 	<title>注册我的News账号</title>
 	<style>
-		.selector-for-some-widget {
+		{% static 'news/.selector' %}-for-some-widget {
 			box-sizing: content-box;
 		}
 	</style>
@@ -26,32 +27,32 @@
 
 		<div class="form-label-group">
 			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-			<label for="inputUsername">Username</label>
+			<label for="inputUsername">用户名</label>
 		</div>
 
 		<div class="form-label-group">
 			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-			<label for="inputEmail">Email address</label>
+			<label for="inputEmail">电子邮箱地址</label>
 		</div>
 
 		<div class="form-label-group">
 			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-			<label for="inputPassword">Password</label>
+			<label for="inputPassword">密码</label>
 		</div>
 
 		<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
 		<div class="text-center mb-4">
 			<br/>
 			<p>已经有了News账号？立即
-				<a href="login.html">登录</a>。
+				<a href="{% url 'login' %}">登录</a>。
 			</p>
 		</div>
 		<p class="mt-5 mb-3 text-muted text-center">
-			<a href="index.html">News</a>© 2017-2018</p>
+			<a href="{% url 'index' %}">News</a>© 2017-2018</p>
 	</form>
-	<script src="js/jquery-3.2.1.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{% static 'news/js/jquery-3.2.1.slim.min.js' %}"></script>
+	<script src="{% static 'news/js/popper.min.js' %}"></script>
+	<script src="{% static 'news/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>

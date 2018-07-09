@@ -116,11 +116,10 @@
             {% for news in manyNews %}
                 <div class="card">
                     <a class="nav-link text-dark" href="{% url 'news-details' news.id %}">
-                        <img class="card-img-top" src="{{news.coverImage}}">
+                        <img class="card-img-top" src="{{news.cover_image}}">
                         <div class="card-body">
                             <h5 class="card-title">{{news.title}}</h5>
-                            <p class="card-text">{{news.introduction}}</p>
-                            <p>{{news.pubDate}}</p>
+                            <p>{{news.pub_date}}</p>
                         </div>
                     </a>
                 </div>
