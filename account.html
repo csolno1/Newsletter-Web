@@ -26,12 +26,7 @@
 	<!--navbar begin-->
 	<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" style="background-color: #ffffff !important">
 		<div class="container">
-			<a class="navbar-brand" href="#">News</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-			 aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
+			<a class="navbar-brand pl-2" href="#">News</a>
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
@@ -52,8 +47,8 @@
 					</li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+					<input class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
+					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button>
 				</form>
 			</div>
 		</div>
@@ -273,20 +268,17 @@
 						</div>
 						<br/>
 						<!--个人信息表单-->
+						<h3 class="p-3">基本信息</h3>
 						<form>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">用户名</label>
-									<input type="email" class="form-control" id="inputUsername" placeholder="Email">
-								</div>
-								<div class="form-group col-md-6">
-									<label for="inputPassword4">密码</label>
-									<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+									<input type="email" class="form-control" id="inputUsername" placeholder="请输入用户名">
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputAddress">电子邮件地址</label>
-								<input type="text" class="form-control" id="inputEmail" placeholder="Email Address">
+								<input type="text" class="form-control" id="inputEmail" placeholder="请输入您的电子邮件地址">
 							</div>
 							<div class="form-group">
 								<label for="inputDescription">自我描述</label>
@@ -335,11 +327,23 @@
 									</div>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary btn-lg btn-block my-2">确认</button>
+							<div class="col-md-6">
+								<button type="submit" class="btn btn-primary btn-lg btn-block my-2">确认</button>
+							</div>
 						</form>
+						<h3 class="p-3">修改密码</h3>
+						<div class="col-md-6">
+							<div class="alert alert-light alert-dismissible fade show" role="alert">
+								<strong>需要输入您的现有密码</strong>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<button class="btn btn-primary btn-lg btn-block my-2" onclick="window.location.href='passworld_change.html'">确认修改密码</button>
+						</div>
 					</div>
 					<!--编辑新闻-->
-					<div class="tab-pane fade" id="list-3" role="tabpanel" aria-labelledby="">
+					<div class="tab-pane fade" id="list-3" role="tabpanel" aria-labelledby>
 						<!--标题-->
 						<div class="col-sm nav nav-tabs flex-column">
 							<div class="my-2 p-3">
