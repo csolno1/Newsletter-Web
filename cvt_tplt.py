@@ -56,7 +56,21 @@ class Index(Replaced):
     name = "index.html"
     regexes = [
         (r"([\w\d\-\/\.]*\.[a-z]+)", r"{% static 'news/\1' %}"),
-
+        (r'<div class="card-columns">([\s\S\r]*)</div>', r'''
+        <div class = "card-columns">
+            {% for news in manyNews %}
+                <div class="card">
+                    <a class="nav-link text-dark" href="{% url 'news-details' news.id %}">
+                        <img class="card-img-top" src="{{news.coverImage}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{news.title}}</h5>
+                            <p class="card-text">{{news.introduction}}</p>
+                            <p>{{news.pubDate}}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>'''), 
     ]
 
 createTemplate(Index())

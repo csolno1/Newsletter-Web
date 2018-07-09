@@ -111,88 +111,21 @@
 		</ul>
 		<br/>
 		<!-- BEGIN#News information -->
-		<div class="card-columns">
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-			</div>
-
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-
-			</div>
-
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-
-			</div>
-
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-
-			</div>
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-
-			</div>
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-
-			</div>
-
-			<div class="card">
-				<a class="nav-link text-dark" href="#">
-					<img class="card-img-top" src="{% static 'news/images/Alfa.jpg' %}">
-					<div class="card-body">
-						<h5 class="card-title">This is the news' title may be Alfa?</h5>
-						<p class="card-text">This is news' text, show more details about the news</p>
-						<p>1908-03-31</p>
-					</div>
-				</a>
-
-			</div>
-
-		</div>
+		
+        <div class = "card-columns">
+            {% for news in manyNews %}
+                <div class="card">
+                    <a class="nav-link text-dark" href="{% url 'news-details' news.id %}">
+                        <img class="card-img-top" src="{{news.coverImage}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{news.title}}</h5>
+                            <p class="card-text">{{news.introduction}}</p>
+                            <p>{{news.pubDate}}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
 		<!-- END#News information -->
 	</main>
 	<script src="{% static 'news/js/jquery-3.2.1.slim.min.js' %}"></script>
