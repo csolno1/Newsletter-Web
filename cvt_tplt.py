@@ -49,7 +49,7 @@ class Replaced:
 
     regexes = [
         (r"(<!doctype html>)", r"{% load static %}\n\1"),
-        (r"([\w\d\-\/\.]*\.[a-z]+)", r"{% static 'news/\1' %}"),
+        (r"\"([\w\d\-\/\.]*\.[a-z]+)\"", r'''"{% static 'news/\1' %}"'''),
         (r"{% static 'news/(.*)\.html' %}", r"{% url '\1' %}"), 
     ]
 
@@ -81,7 +81,12 @@ class Register(Replaced):
     name = "register.html"
     regexes = []
 
+class NewsDetail(Replaced):
+    name = "news_detail.html"
+    regexes = []
+
 createTemplate(Index())
 createTemplate(Login())
 createTemplate(Register())
+createTemplate(NewsDetail())
 moveStaticFiles()

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'news/css/floating-labels.css' %}">
     <title>登录我的News</title>
     <style>
-        {% static 'news/.selector' %}-for-some-widget {
+        .selector-for-some-widget {
             box-sizing: content-box;
         }
     </style>
@@ -35,13 +35,12 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <label for="inputPassword">密码</label>
         </div>
-
         <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" value="remember-me">记住密码
             </label>
         </div>
-        <div class="invalid-feedback">提示内容</div>
+        <div class="invalid-feedback text-center mb-4" style="font-size: 1rem; display: block">提示内容</div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
         <div class="text-center mb-4">
             <br/>
