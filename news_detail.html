@@ -37,7 +37,7 @@
             class="navbar navbar-expand-md navbar-light bg-light fixed-top"
             style="background-color: #ffffff !important">
             <div class="container">
-                <a class="navbar-brand pl-2" href="#">News</a>
+                <a class="navbar-brand pl-2" href="index.html">News</a>
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -77,7 +77,7 @@
                                     <p class="blog-post-meta">
                                         {{news.pub_date}}
                                         by
-                                        {{news.pub_user}}
+                                        {{news.author}}
                                     </p>
 
                                     <hr>
@@ -128,18 +128,15 @@
                             <div class="mb-3 p-2">
 
                                 <hr>
+                                {% for comment in news.comments.all %}
                                 <div>
                                     <p>
-                                        <span>UserName</span>▪
-                                        <em>15 分钟前</em>
+                                        <span>{{comment.user}}</span>▪
+                                        <em>{{comment.pub_date}}</em>
                                     </p>
-                                    <p>这是评论内容哈哈哈</p>
+                                    <p>{{comment.content}}</p>
                                 </div>
-                                <div>
-                                    <span>UserNamehaha</span>▪
-                                    <em>2 天前</em>
-                                    <p>这还是评论内容呵呵</p>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                         <!-- Comment list end -->
@@ -151,16 +148,11 @@
                                 <span class="text-muted">您感兴趣</span>
                             </h4>
                             <div class="container">
+                                {% for relative_news in relative_news_list %}
                                 <div class="row">
-                                    <a href="#">article</a>
+                                    <a href="{% url 'news-details' relative_news.id %}">{{relative_news.title}}</a>
                                 </div>
-                                <div class="row">
-                                    <a href="#">article</a>
-                                </div>
-                                <div class="row">
-                                    <a href="#">article</a>
-                                </div>
-
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

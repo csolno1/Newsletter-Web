@@ -14,12 +14,11 @@ class Tag(models.Model):
     name = models.CharField(max_length=10, choices=name_choice)
     def __str__(self):
         return self.name
-    def default(self):
-        return Tag.objects.get(name="全球")
 
 class News(models.Model):
     title = models.CharField(max_length=40)
     pub_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="pub_news")
+    author = models.CharField(max_length=40, default="unknown")
     review_pass_user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name="pass_news", blank=True, null=True)
     cover_image = models.URLField(blank=True, null=True)
     pub_date = models.DateTimeField()
@@ -28,6 +27,14 @@ class News(models.Model):
     tags = models.ManyToManyField(Tag, related_name="news")
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comments")
+    content = models.TextField()
+    pub_date = models.DateTimeField()
+    news = models.ForeignKey(News, on_delete=models.CASCADE, related_name="comments")
+    def __str__(self):
+        return self.content
 
 
 

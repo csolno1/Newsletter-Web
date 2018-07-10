@@ -75,5 +75,20 @@ class NewsDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['login_in'] = self.request.user.is_authenticated
+        cur_news = self.get_object()
+        relative_tags = cur_news.tags.all()
+        relative_news = News.objects.none()
+        for tag in relative_tags:
+            relative_news = relative_news.union(tag.news.all())
+        context['relative_tags'] = relative_tags
         return context
 
+def account(request):
+    user = request.user
+    if(user.is_authenticated):
+        return render(request, "news/account.html", {'user' : user})
+    else:
+        return http.HttpResponseRedirect(reverse("index"))
+
+def home(request):
+    return http.HttpResponseRedirect(reverse("index"))

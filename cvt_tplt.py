@@ -83,8 +83,8 @@ class Replaced:
         {% endif %}
         '''
         ),
-        (r"{% static 'news/(.*)\.html' %}", r"{% url '\1' %}"), 
         (r"\"([\w\d\-\/\.]*\.[a-z]+)\"", r'''"{% static 'news/\1' %}"'''),
+        (r"{% static 'news/(.*)\.html' %}", r"{% url '\1' %}"), 
     ]
 
 class Index(Replaced):
@@ -119,8 +119,13 @@ class NewsDetail(Replaced):
     name = "news_detail.html"
     regexes = []
 
+class Account(Replaced):
+    name = "account.html"
+    regexes = []
+
 createTemplate(Index())
 createTemplate(Login())
 createTemplate(Register())
 createTemplate(NewsDetail())
+createTemplate(Account())
 moveStaticFiles()
