@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'news/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'news/css/floating-labels.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/style.css' %}" media="screen" type="text/css" />
     <title>登录我的News</title>
     <style>
         .selector-for-some-widget {
@@ -19,7 +20,8 @@
 </head>
 
 <body>
-    <form class="form-signin login-form" style="background-color: #ffffff" action="{% url 'login' %}" method="POST">
+    <form class="form-signin login-form" style="background-color: #ffffff;width:420px;height:628px" action="{% url 'login' %}"
+        method="POST">
         {% csrf_token %}
         <div class="text-center mb-4" style="color: #007bff">
             <img class="mb-4" src="" alt="" width="72" height="72">
@@ -45,6 +47,7 @@
         <div class="invalid-feedback text-center mb-4" style="font-size: 1rem; display: block">{{error}}</div>
         {% endif %}
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+
         <div class="text-center mb-4">
             <br/>
             <p>还没有您的News账号？立即

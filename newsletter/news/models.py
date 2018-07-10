@@ -27,6 +27,8 @@ class News(models.Model):
     tags = models.ManyToManyField(Tag, related_name="news")
     def __str__(self):
         return self.title
+    def favorited_count(self):
+        return favorited.all().count
 
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comments")

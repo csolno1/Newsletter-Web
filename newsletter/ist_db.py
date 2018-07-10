@@ -4,6 +4,8 @@ file = "*.html"
 
 import re
 def pre_process(c):
+    c = c.rsplit("</div>", 1)
+    c = c[0] + c[1]
     return c
 
 import glob
@@ -18,7 +20,7 @@ for file in glob.glob(source + file):
     jsonName = file.rsplit('.', 1)[0] + ".json"
     i = open(file, 'r', encoding='utf-8')
     c = i.read()
-    #c = pre_process(c)
+    c = pre_process(c)
     i.close()
     meta_data = json.load(open(jsonName, 'r'))
     tags = models.Tag.objects.filter(name__in=meta_data['key_tag'])

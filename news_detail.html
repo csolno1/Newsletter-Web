@@ -87,6 +87,7 @@
                                     <hr>
                                 </div>
                             </div>
+                            {% if login_in %}
                             <!-- Like apart begin -->
                             <div class="row p-3 mb-3">
                                 <div class="col-4"></div>
@@ -116,8 +117,8 @@
                                         <input
                                             type="text"
                                             class="form-control"
-                                            placeholder="Recipient's username"
-                                            aria-label="Recipient's username"
+                                            placeholder="在这里填写你的评论"
+                                            aria-label="Recipient's content"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary" type="button">提交</button>
@@ -126,6 +127,7 @@
                                 </div>
                             </div>
                             <!-- Comment list begin -->
+                            {% endif %}
                             <div class="mb-3 p-2">
 
                                 <hr>

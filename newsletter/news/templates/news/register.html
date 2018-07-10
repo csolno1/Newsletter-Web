@@ -10,6 +10,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="{% static 'news/css/bootstrap.min.css' %}">
 	<link rel="stylesheet" href="{% static 'news/css/floating-labels.css' %}">
+	<link rel="stylesheet" href="{% static 'news/css/style.css' %}" media="screen" type="text/css"  />
 	<title>注册我的News账号</title>
 	<style>
 		.selector-for-some-widget {
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-	<form class="form-signin" style="background-color: #ffffff" action="{% url 'register' %}" method="POST">
+	<form class="form-signin" style="background-color: #ffffff;width:420px;height:628px" action="{% url 'register' %}" method="POST">
 		{% csrf_token %}
 		<div class="text-center mb-4" style="color: #007bff">
 			<h1 class="display-2 h3 mb-3 font-weight-normal">News</h1>

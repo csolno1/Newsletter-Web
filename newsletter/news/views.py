@@ -68,6 +68,7 @@ def register(request):
             return http.HttpResponseRedirect(reverse("index"))
         return render(request, 'news/register.html')
 
+from django.db.models import Count
 class NewsDetail(DetailView):
     model = News
     template_name = "news/news_detail.html"
@@ -80,7 +81,9 @@ class NewsDetail(DetailView):
         relative_news = News.objects.none()
         for tag in relative_tags:
             relative_news = relative_news.union(tag.news.all())
-        context['relative_tags'] = relative_tags
+        import random
+        relative_news = sorted(relative_news, key=lambda x:random.random())
+        context['relative_news_list'] = relative_news[:16]
         return context
 
 def account(request):
