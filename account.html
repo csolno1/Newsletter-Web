@@ -172,37 +172,6 @@
 								</div>
 							</li>
 						</ul>
-						<!--个人标签-->
-						<h3 class="p-3">个人偏好标签</h3>
-						<div class="alert alert-primary" role="alert">
-							科技
-						</div>
-						<div class="alert alert-secondary" role="alert">
-							政治
-						</div>
-						<div class="alert alert-success" role="alert">
-							科学
-						</div>
-						<div class="alert alert-danger" role="alert">
-							体育
-						</div>
-						<div class="alert alert-warning" role="alert">
-							全球
-						</div>
-						<div class="alert alert-info" role="alert">
-							健康
-						</div>
-						<!--公告-->
-						<h3 class="p-3">公告</h3>
-						<div class="jumbotron">
-							<h1 class="display-4">Hello, my friends!</h1>
-							<p class="lead">欢迎来到我们的网站，在这里你可以浏览到最新最热的新闻，并且它是完全免费的！</p>
-							<hr class="my-4">
-							<p>要了解有关构建本网站的更多消息，请点击下面的按钮。</p>
-							<p class="lead">
-							  <a class="btn btn-primary btn-lg" href="#" role="button">了解更多</a>
-							</p>
-						  </div>
 					</div>
 					<!--我的发布历史-->
 					<div class="tab-pane fade" id="list-1" role="tabpanel" aria-labelledby>
@@ -261,7 +230,7 @@
 						</ul>
 					</div>
 					<!--个人设置-->
-					<div class="tab-pane fade" id="list-2" role="tabpanel" aria-labelledby="">
+					<div class="tab-pane fade" id="list-2" role="tabpanel" aria-labelledby>
 						<!--标题-->
 						<div class="col-sm nav nav-tabs flex-column">
 							<div class="my-2 p-3">
@@ -271,60 +240,11 @@
 						</div>
 						<br/>
 						<!--个人信息表单-->
-						<h3 class="p-3">基本信息</h3>
+						<h3 class="p-3">修改电子邮件</h3>
 						<form>
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<label for="inputEmail4">用户名</label>
-									<input type="email" class="form-control" id="inputUsername" placeholder="请输入用户名">
-								</div>
-							</div>
-							<div class="form-group">
+							<div class="form-group col-md-6">
 								<label for="inputAddress">电子邮件地址</label>
-								<input type="text" class="form-control" id="inputEmail" placeholder="请输入您的电子邮件地址">
-							</div>
-							<label for="checkbox">偏好标签</label>
-							<div class="form-group row" id="checkbox">
-								<div class="col-6">
-									<div class="form-check my-1">
-										<input class="form-check-input" type="checkbox" id="gridCheck">
-										<label class="form-check-label alert alert-primary" for="gridCheck">
-											科技
-										</label>
-									</div>
-									<div class="form-check my-1">
-										<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-										<label class="form-check-label alert alert-secondary" for="defaultCheck1">
-											政治
-										</label>
-									</div>
-									<div class="form-check my-1">
-										<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-										<label class="form-check-label alert alert-success" for="defaultCheck2">
-											经济
-										</label>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="form-check my-1">
-										<input class="form-check-input" type="checkbox" id="gridCheck">
-										<label class="form-check-label alert alert-danger" for="gridCheck">
-											体育
-										</label>
-									</div>
-									<div class="form-check my-1">
-										<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-										<label class="form-check-label alert alert-warning" for="defaultCheck1">
-											娱乐
-										</label>
-									</div>
-									<div class="form-check my-1">
-										<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-										<label class="form-check-label alert alert-info" for="defaultCheck2">
-											健康
-										</label>
-									</div>
-								</div>
+								<input type="text" class="form-control" id="inputEmail" placeholder="请输入新的电子邮件地址">
 							</div>
 							<div class="col-md-6">
 								<button type="submit" class="btn btn-primary btn-lg btn-block my-2">确认修改</button>
@@ -338,7 +258,7 @@
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<button class="btn btn-primary btn-lg btn-block my-2" onclick="window.location.href='password_change.html'">确认修改密码</button>
+							<button class="btn btn-primary btn-lg btn-block my-2" onclick="window.location.href='password_change.html'">修改密码</button>
 						</div>
 					</div>
 					<!--编辑新闻-->
@@ -346,7 +266,7 @@
 						<!--标题-->
 						<div class="col-sm nav nav-tabs flex-column">
 							<div class="my-2 p-3">
-								<h2 class="display-4">编辑新闻</h4>
+								<h2 class="display-4">编辑新闻</h2>
 									<p class="lead"></p>
 							</div>
 						</div>
@@ -396,11 +316,11 @@
 						<button type="submit" class="btn btn-primary btn-lg btn-block my-2">发布</button>
 					</div>
 					<!--浏览历史-->
-					<div class="tab-pane fade" id="list-4" role="tabpanel" aria-labelledby="">
+					<div class="tab-pane fade" id="list-4" role="tabpanel" aria-labelledby>
 						<!--标题-->
 						<div class="col-sm nav nav-tabs flex-column">
 							<div class="my-2 p-3">
-								<h2 class="display-4">浏览历史</h4>
+								<h2 class="display-4">浏览历史</h2>
 									<p class="lead"></p>
 							</div>
 						</div>
@@ -452,11 +372,11 @@
 						</ul>
 					</div>
 					<!--审查功能-->
-					<div class="tab-pane fade" id="list-5" role="tabpanel" aria-labelledby="">
+					<div class="tab-pane fade" id="list-5" role="tabpanel" aria-labelledby>
 						<!--标题-->
 						<div class="col-sm nav nav-tabs flex-column">
 							<div class="my-2 p-3">
-								<h2 class="display-4">新闻审查</h4>
+								<h2 class="display-4">新闻审查</h2>
 									<p class="lead"></p>
 							</div>
 						</div>
