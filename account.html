@@ -533,9 +533,12 @@
 		editor.create()
 	</script>
 	<script>
-		$("form#email-change").submit(function(e){
-			alert("email-changed");
+		$(document).ready(function(){
+			$("#email-change").submit(function(e){
+				alert($("#inputEmail").val());
+			});
 		});
+		
 	</script>
 </body>
 
