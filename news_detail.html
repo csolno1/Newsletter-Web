@@ -53,8 +53,9 @@
                         </li>
                         {{topleftbar}}
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+                    <form class="form-inline my-2 my-lg-0 search-form">
                         <input
+                            id="search-content"
                             class="form-control mr-sm-2"
                             type="text"
                             placeholder="您感兴趣的新闻"
@@ -127,7 +128,16 @@
                                 </div>
                             </div>
                             <!-- Comment list begin -->
+                            {% else %}
+                            <div class="row p-3 mb-3">
+                                    <div class="col-4"></div>
+                                    <div class="col-5">
+                                        <a href="#login">点击我进行登录以收藏与评论新闻</a>
+                                    </div>
+                                    <div class="col-3"></div>
+                            </div>
                             {% endif %}
+                            
                             <div class="mb-3 p-2">
 
                                 <hr>
@@ -164,7 +174,66 @@
             <script src="js/jquery-3.2.1.slim.min.js"></script>
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
-            <script src="js/news_details.js"></script>>
+            <script>
+               $(function(){
+                    var xmlhttp;
+                    var loveFlag; 
+                    
+
+                    $(function(){
+                        if(window.XMLHttpRequest)
+                        {
+                            xmlhttp = new XMLHttpRequest();
+                        }
+                        else{
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange = function(){
+                            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                                if(xmlhttp.responseText==0)
+                                {
+                                    loveFlag = 0;
+                                    $('#love-btn').button('dispose');
+                                }
+                                if(xmlhttp.responseText==1)
+                                {
+                                    loveFlag = 1;
+                                    $('#love-btn').button('toggle');
+                                }
+                            }
+                        }
+                        xmlhttp.open("GET","#URL",true);
+                        xmlhttp.send();
+                    });
+                    
+                    function loveChange(){
+                        if(loveFlag==0)
+                            loveFlag = 1;
+                        else
+                            loveFlag = 0;
+                            var postData= { //（2）传递参数到后台，注意后台接收方式 
+                                "loveFlag":loveFlag}
+                    /**重点：ajax的type,url,dataType,data属性*/
+                        $.ajax({
+                                async : false,
+                                cache : false,
+                                type : 'POST',
+                                url : 'area/delete',
+                                dataType : "json",
+                                data : postData,            
+                                error : function() {
+                                    alert('请求失败 ');
+                                },
+                                success : function(data) {
+                                    alert(data);
+                                }
+                    
+                            });
+                    }
+                 
+                });
+
+            </script>
         </body>
 
     </html>
