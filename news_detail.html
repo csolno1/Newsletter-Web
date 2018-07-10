@@ -77,7 +77,7 @@
                                     <p class="blog-post-meta">
                                         {{news.pub_date}}
                                         by
-                                        {{news.author}}
+                                        {{news.author}} {% for tag in news.tags.all %}{{tag.name}} {% endfor %}
                                     </p>
 
                                     <hr>

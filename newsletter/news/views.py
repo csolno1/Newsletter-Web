@@ -93,5 +93,22 @@ def account(request):
     else:
         return http.HttpResponseRedirect(reverse("index"))
 
+def logout(request):
+    auth.logout(request)
+    return http.HttpResponseRedirect(reverse("login"))
+
 def home(request):
     return http.HttpResponseRedirect(reverse("index"))
+
+def favroite_news(request, pk):
+    if(request.user.is_authenticated):
+        news = News.objects.get(id=pk)
+        if(news != None):
+            if(len(news.favorited.all().filter(id=request.user.id)) != 0):      
+                return http.HttpResponse("1")
+    return http.HttpResponse("0")
+
+def favorite_news_post(request, pk, r):
+    if(request.method != "POST"):
+        return http.Http404()
+    
