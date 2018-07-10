@@ -9,3 +9,11 @@ class NewsAdmin(admin.ModelAdmin):
 @admin.register(models.Tag)
 class TagAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(models.Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(models.Checkable)
+class CheckableAdmin(admin.ModelAdmin):
+    pass

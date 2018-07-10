@@ -38,6 +38,22 @@ class Comment(models.Model):
     def __str__(self):
         return self.content
 
+class Checkable(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="checkable")
+    value = models.BooleanField(default=False)
+    def __str__(self):
+        return self.user.username
+
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Checkable.objects.create(user=instance, value=False)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.checkable.save()
 
 
 
