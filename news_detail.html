@@ -11,7 +11,7 @@
         <link href="css/news_detail.css" rel="stylesheet">
         <style>
             body {
-                background-color: #f6f6f6;
+                background-color: #ffffff;
             }
 
             main {
@@ -71,7 +71,7 @@
 
                     <div class="col col-md-9 order-md-1">
                         <div class="p-3">
-                            <div class="row p-3 article">
+                            <div class="row p-3 article" style="background:rgb(255, 255, 255)">
                                 <div class="blog-post">
                                     <h2 class="blog-post-title">{{news.title}}</h2>
                                     <p class="blog-post-meta">
@@ -98,7 +98,8 @@
                                         data-toggle="button"
                                         aria-pressed="false"
                                         autocomplete="off"
-                                        onclick="loveChange()">
+                                        onclick="loveChange()"
+                                        style="border:none";>
                                         <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
                                     </button>
             
@@ -143,10 +144,10 @@
                         <!-- Comment list end -->
                         <!-- Comment apart end -->
                     </div>
-                    <div class="col col-md-3 order-md-2 mb-4 p-3">
-                        <div class="love-list p-4">
+                    <div class="col col-md-3 order-md-2 mb-4 p-3" >
+                        <div class="love-list p-4" style="background:rgb(196, 195, 195)">
                             <h4>
-                                <span class="text-muted">您感兴趣</span>
+                                <spa>您感兴趣</span>
                             </h4>
                             <div class="container">
                                 {% for relative_news in relative_news_list %}
