@@ -117,13 +117,14 @@
                                 <div class="row">
                                     <div class="input-group mb-3 comment-form">
                                         <input
+                                            id="comment-content"
                                             type="text"
                                             class="form-control"
                                             placeholder="在这里填写你的评论"
                                             aria-label="Recipient's content"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button">提交</button>
+                                            <button class="btn btn-outline-secondary" type="button" onclick="commentAction()">提交</button>
                                         </div>
                                     </div>
                                 </div>
@@ -225,6 +226,17 @@
                     }
                     xmlhttp.open("GET","{% url 'news-favorited' news.id %}/" + loveFlag.toString(),true);
                     xmlhttp.send();
+                }
+                function commentAction(){
+                    var commentContent = $('#comment-content').val();
+                    if(commentContent == "")
+                        alert("Plz input comment content");
+                    else {
+                        xml.open("GET","#url",true);
+                        xml.send();
+
+                        $('#comment-content').val("");
+                    }
                 }
             </script>
         </body>
