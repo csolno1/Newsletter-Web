@@ -53,7 +53,7 @@
                         </li>
                         {{topleftbar}}
                     </ul>
-                    <form class="form-inline my-2 my-lg-0 search-form">
+                    <form class="form-inline my-2 my-lg-0 search-form" onsubmit="submitVal(this)">
                         <input
                             id="search-content"
                             class="form-control mr-sm-2"
@@ -105,7 +105,7 @@
                                         <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
                                     </button>
             
-                                    <span>{{news.favorited.count}}</span>
+                                    <span id="love-span">{{news.favorited.count}}</span>
                                     人收藏
                                 </div>
                                 <div class="col-4"></div>
@@ -172,12 +172,14 @@
                     </div>
                 </div>
             </main>
-            <script src="js/jquery-3.2.1.slim.min.js"></script>
+            <script src="js/jquery-3.3.1.min.js"></script>
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
+            <script src="js/search.js"></script>
             <script>
                 var loveFlag; 
                 var xmlhttp;
+                var loveNum = $('#love-span').val();
                $(function(){
                     
 
@@ -213,9 +215,13 @@
                 function loveChange(){
                     if(loveFlag==0){
                         loveFlag = 1;
+                        loveNum = loveNum + 1;
+                        $('#love-span').text(loveNum);
                     }
                     else{
                         loveFlag = 0;
+                        loveNum = loveNum - 1; 
+                        $('#love-span').text(loveNum);
                     }
                     xmlhttp.open("GET","{% url 'news-favorited' news.id %}/" + loveFlag.toString(),true);
                     xmlhttp.send();
