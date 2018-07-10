@@ -123,9 +123,14 @@ class Account(Replaced):
     name = "account.html"
     regexes = []
 
+class Search(Replaced):
+    name = "search.html"
+    regexes = []
+
 createTemplate(Index())
 createTemplate(Login())
 createTemplate(Register())
 createTemplate(NewsDetail())
 createTemplate(Account())
+createTemplate(Search())
 moveStaticFiles()

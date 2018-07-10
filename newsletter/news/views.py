@@ -132,3 +132,10 @@ def comment_post(request, pk, content):
     Comment.objects.create(user=request.user, content=content, pub_date=now, news=news)
     return http.HttpResponse("Comment sent ok")
 
+def search(request, content):
+    context = {}
+    context['login_in'] = request.user.is_authenticated
+    context['news_list'] = News.objects.filter(title__contains=content)
+    return render(request, "news/search.html", context)
+
+

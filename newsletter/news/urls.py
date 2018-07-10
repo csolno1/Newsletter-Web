@@ -14,4 +14,5 @@ urlpatterns = [
     path('favorite/<int:pk>', views.favroite_news, name="news-favorited"),
     path('favorite/<int:pk>/<int:f>', views.favorite_news_post, name="news-favorited-post"),
     path('comment/<int:pk>/<str:content>', views.comment_post, name="comment-post"),
+    path('search/<str:content>', views.search, name="search"),
 ]

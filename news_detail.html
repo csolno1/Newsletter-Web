@@ -53,17 +53,9 @@
                         </li>
                         {{topleftbar}}
                     </ul>
-                    <form class="form-inline my-2 my-lg-0 search-form" onsubmit="submitVal(this)">
-                        <input
-                            id="search-content"
-                            class="form-control mr-sm-2"
-                            type="text"
-                            placeholder="您感兴趣的新闻"
-                            aria-label="Search">
-                        <button
-                            class="btn btn-outline-primary my-2 my-sm-0"
-                            type="submit"
-                            onclick="mySearch">搜索</button>
+                    <form class="form-inline my-2 my-lg-0" onsubmit="return submitVal(this);">
+                        <input id="search-content" class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button>
                     </form>
                 </div>
             </nav>
@@ -235,7 +227,7 @@
                         xmlhttp.open("GET","/comment/{{news.id}}/" + commentContent,true);
                         xmlhttp.send();
                         $('#comment-content').val("");
-                        window.location.href = "{% url 'news-details' news.id %}"
+                        window.location.href = "{% url 'news-details' news.id %}";
                     }
                 }
             </script>
