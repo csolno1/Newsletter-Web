@@ -45,10 +45,7 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button>
-                </form>
+                
             </div>
         </div>
     </nav>
@@ -56,11 +53,11 @@
         <center style="padding: 50px 50px 50px 50px;color: #007bff">
             <img src="images/news1.png">
         </center>
-        <form>
+        <form onsubmit="submitVal(this)">
             <div class="row mb-5">
                 <div class="col-2"></div>
                 <div class="col-7">
-                    <input class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
+                    <input id="search-content" class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
                 </div>
                 <div class="col-3">
                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button>
@@ -176,6 +173,7 @@
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>
