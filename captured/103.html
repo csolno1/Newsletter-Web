@@ -1,0 +1,46 @@
+
+			<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260107053,	//vid
+							pic: '//n.sinaimg.cn/front/138/w600h338/20180710/ymz3-hezpzwu6269626.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/front/138/w600h338/20180710/ymz3-hezpzwu6269626.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '占道经营女摊主辱骂殴打城管队员',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://k.sina.cn/article_5044281310_m12ca99fde02000if6z.html?from=news&subch=onews'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　7月7日，河北沧州。城管队员在清理占道经营时，一女摊主以辱骂、推搡、殴打的方式阻碍城管正常执法。目前该女摊主已被处以行政拘留十日处罚。</p>
+<p>　　澎湃新闻记者：陆鸣&nbsp;</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->

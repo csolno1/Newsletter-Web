@@ -1,0 +1,46 @@
+
+			<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260103802,	//vid
+							pic: '//n.sinaimg.cn/sinacn10/0/w1024h576/20180710/10ba-hezpzwu5555897.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/sinacn10/0/w1024h576/20180710/10ba-hezpzwu5555897.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '西安交警开套牌盗抢车：系朋友委托保管',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://k.sina.cn/article_6275620474_m1760e5e7a020008jft.html?from=news&subch=onews'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　7月9日，陕西西安。针对“交警套牌后开‘盗抢车’”，交警回应，车辆当时实际控制人非车主，系控制人交由朋友关系的交警王保云保管。因协助法院处理案件，车辆暂扣2年。</p>
+<p>　　澎湃新闻记者 谢煜楠&nbsp;</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->

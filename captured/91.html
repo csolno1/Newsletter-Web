@@ -1,0 +1,45 @@
+
+			<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260101872,	//vid
+							pic: '//n.sinaimg.cn/translate/138/w600h338/20180710/KWad-hezpzwu5041028.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/translate/138/w600h338/20180710/KWad-hezpzwu5041028.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '清洁工捡垃圾不慎落水，两外卖哥跳河救',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://k.sina.cn/article_1698823241_m6541fc4902000aalx.html?from=news&subch=onews'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　7月9号，安徽六安。女清洁工河边捡垃圾时不慎落水，附近开早会的美团外卖哥卢燕腾及一同事闻讯跳河，将女子拉上岸。女子丈夫告诉澎湃新闻，妻子无大碍，非常感谢外卖哥。</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->

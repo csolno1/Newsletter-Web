@@ -1,0 +1,46 @@
+
+			<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260106950,	//vid
+							pic: '//n.sinaimg.cn/sinacn12/0/w1024h576/20180710/5021-hezpzwu6430244.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/sinacn12/0/w1024h576/20180710/5021-hezpzwu6430244.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '亲兄妹年过半百联手制毒：半成品十公斤',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://k.sina.cn/article_6275620474_m1760e5e7a020008jr7.html?from=news&subch=onews'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　近日，四川泸州，纳溪区禁毒缉毒大队经过7个月摸排蹲守，抓获两名制毒嫌疑人。二人为亲兄妹，均已年过五十。缴获毒品及半成品10.3余公斤。案件正进一步侦办中。</p>
+<p>　　澎湃新闻记者 宫润泽</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
