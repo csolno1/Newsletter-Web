@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import News, Tag
+from .models import News, Tag, Comment
 # Create your views here.
 
 class NewsList(ListView):
@@ -89,7 +89,7 @@ class NewsDetail(DetailView):
 def account(request):
     user = request.user
     if(user.is_authenticated):
-        
+
 
         return render(request, "news/account.html", {'user' : user})
     else:
@@ -122,4 +122,12 @@ def favorite_news_post(request, pk, f):
         news.favorited.remove(request.user)
         return http.HttpResponse("Unfavorite success")
 
-    
+def comment_post(request, pk, content):
+    if(not request.user.is_authenticated):
+        return http.HttpResponseForbidden()
+    news = News.objects.get(id=pk)
+    from datetime import datetime
+    now = datetime.now()
+    Comment.objects.create(user=request.user, content=content, pub_date=now, news=news)
+    return http.HttpResponse("Comment sent ok")
+

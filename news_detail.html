@@ -232,10 +232,10 @@
                     if(commentContent == "")
                         alert("Plz input comment content");
                     else {
-                        xml.open("GET","#url",true);
-                        xml.send();
-
+                        xmlhttp.open("GET","/comment/{{news.id}}/" + commentContent,true);
+                        xmlhttp.send();
                         $('#comment-content').val("");
+                        window.location.href = "{% url 'news-details' news.id %}"
                     }
                 }
             </script>
