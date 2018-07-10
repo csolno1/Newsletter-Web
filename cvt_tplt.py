@@ -49,8 +49,42 @@ class Replaced:
 
     regexes = [
         (r"(<!doctype html>)", r"{% load static %}\n\1"),
-        (r"\"([\w\d\-\/\.]*\.[a-z]+)\"", r'''"{% static 'news/\1' %}"'''),
+        (r"{{topleftbar}}", '''
+        {% if login_in %}
+            <a class="nav-link active" href="account.html">
+                <img
+                    src="images/home_black_18dp.png"
+                    width="20"
+                    height="20"
+                    class="d-inline-block align-top"
+                    alt="alt">个人空间</a>
+        {% else %}
+        <li class="nav-item dropdown active">
+            <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown0"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+                <img
+                    src="images/face_black_18dp.png"
+                    width="20"
+                    height="20"
+                    class="d-inline-block align-top"
+                    alt="alt">账户
+                <span class="sr-only">(current)</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown0">
+                <a class="dropdown-item" href="login.html">登录</a>
+                <a class="dropdown-item" href="register.html">注册</a>
+            </div>
+        </li>
+        {% endif %}
+        '''
+        ),
         (r"{% static 'news/(.*)\.html' %}", r"{% url '\1' %}"), 
+        (r"\"([\w\d\-\/\.]*\.[a-z]+)\"", r'''"{% static 'news/\1' %}"'''),
     ]
 
 class Index(Replaced):

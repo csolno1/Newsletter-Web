@@ -13,6 +13,7 @@ class NewsList(ListView):
         context['all_tag'] = True
         context['favorite_tag'] = False
         context['cur_tag'] = None
+        context['login_in'] = self.request.user.is_authenticated
         return context
     
 class NewsTagDetail(DetailView):
@@ -25,6 +26,7 @@ class NewsTagDetail(DetailView):
         context['all_tag'] = False
         context['favorite_tag'] = False
         context['manyNews'] = super().get_object().news.all()
+        context['login_in'] = self.request.user.is_authenticated
         return context
 
 from django.contrib.auth.models import User
@@ -70,3 +72,8 @@ class NewsDetail(DetailView):
     model = News
     template_name = "news/news_detail.html"
     context_object_name = "news"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['login_in'] = self.request.user.is_authenticated
+        return context
+
