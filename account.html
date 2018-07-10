@@ -96,36 +96,13 @@
 						</div>
 						<!--收藏列表-->
 						<h3 class="p-3">我的收藏</h3>
-						<div class="alert alert-dark" role="alert">
-							<strong>
-								<a href="#">新闻标题</a>
-							</strong>收藏于
-							<em>yy mm dd</em>
-						</div>
-						<div class="alert alert-dark" role="alert">
-							<strong>
-								<a href="#">新闻标题</a>
-							</strong>收藏于
-							<em>yy mm dd</em>
-						</div>
-						<div class="alert alert-dark" role="alert">
-							<strong>
-								<a href="#">新闻标题</a>
-							</strong>收藏于
-							<em>yy mm dd</em>
-						</div>
-						<div class="alert alert-dark" role="alert">
-							<strong>
-								<a href="#">新闻标题</a>
-							</strong>收藏于
-							<em>yy mm dd</em>
-						</div>
-						<div class="alert alert-dark" role="alert">
-							<strong>
-								<a href="#">新闻标题</a>
-							</strong>收藏于
-							<em>yy mm dd</em>
-						</div>
+						{% for news in user.favorite_news.all %}
+							<div class="alert alert-dark" role="alert">
+								<strong>
+									<a href="{% url 'news-details' news.id %}">{{news.title}}</a>
+								</strong>
+							</div>
+						{% endfor %}
 						<!--发布列表-->
 						<h3 class="p-3">最近发布</h3>
 						<ul class="list-unstyled">

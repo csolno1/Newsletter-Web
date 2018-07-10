@@ -89,6 +89,8 @@ class NewsDetail(DetailView):
 def account(request):
     user = request.user
     if(user.is_authenticated):
+        
+
         return render(request, "news/account.html", {'user' : user})
     else:
         return http.HttpResponseRedirect(reverse("index"))
