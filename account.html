@@ -76,24 +76,17 @@
 						</div>
 						<!--留言-->
 						<h3 class="p-3">我的留言</h3>
+						{% for comment in user.comments.all %}
 						<div class="alert alert-dark" role="alert">
 							<p>
-								<span class="font-italic">Username</span>评论了
-								<a href="#">title</a>发布于
-								<em>yy mm dd</em>
+								<span class="font-italic">{{user.username}}</span>评论了
+								<a href="{% url 'news-details' comment.news.id %}">{{comment.news.title}}</a>发布于
+								<em>{{comment.pub_date}}</em>
 							</p>
 							<hr>
-							<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+							<p class="mb-0">{{comment.content}}</p>
 						</div>
-						<div class="alert alert-dark" role="alert">
-							<p>
-								<span class="font-italic">Username</span>评论了
-								<a href="#">title</a>发布于
-								<em>yy mm dd</em>
-							</p>
-							<hr>
-							<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-						</div>
+						{% endfor %}
 						<!--收藏列表-->
 						<h3 class="p-3">我的收藏</h3>
 						{% for news in user.favorite_news.all %}
