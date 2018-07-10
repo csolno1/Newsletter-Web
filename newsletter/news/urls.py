@@ -12,4 +12,5 @@ urlpatterns = [
     path('account/logout', views.logout, name='account-logout'),
     path('details/<int:pk>', views.NewsDetail.as_view(), name='news-details'),
     path('favorite/<int:pk>', views.favroite_news, name="news-favorited"),
+    path('favorite/<int:pk>/<int:f>', views.favorite_news_post, name="news-favorited-post"),
 ]

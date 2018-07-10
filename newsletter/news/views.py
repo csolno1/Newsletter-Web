@@ -101,6 +101,7 @@ def home(request):
     return http.HttpResponseRedirect(reverse("index"))
 
 def favroite_news(request, pk):
+    import json
     if(request.user.is_authenticated):
         news = News.objects.get(id=pk)
         if(news != None):
@@ -108,7 +109,15 @@ def favroite_news(request, pk):
                 return http.HttpResponse("1")
     return http.HttpResponse("0")
 
-def favorite_news_post(request, pk, r):
-    if(request.method != "POST"):
-        return http.Http404()
+def favorite_news_post(request, pk, f):
+    if(not request.user.is_authenticated):
+        return http.HttpResponseForbidden()
+    news = News.objects.get(id=pk)
+    if(f == 1):
+        news.favorited.add(request.user)
+        return http.HttpResponse("Favorite success")
+    else:
+        news.favorited.remove(request.user)
+        return http.HttpResponse("Unfavorite success")
+
     
