@@ -96,7 +96,7 @@ class Index(Replaced):
             {% for news in manyNews %}
                 <div class="card">
                     <a class="nav-link text-dark" href="{% url 'news-details' news.id %}">
-                        <img class="card-img-top" src="{{news.cover_image}}">
+                        <img class="card-img-top" src="{% if news.cover_image %}{{news.cover_image}}{% endif %}">
                         <div class="card-body">
                             <h5 class="card-title">{{news.title}}</h5>
                             <p>{{news.pub_date}}</p>
