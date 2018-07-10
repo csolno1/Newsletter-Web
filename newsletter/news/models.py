@@ -17,11 +17,11 @@ class Tag(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=40)
-    pub_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="pub_news")
+    pub_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="pub_news", null=True)
     author = models.CharField(max_length=40, default="unknown")
     review_pass_user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name="pass_news", blank=True, null=True)
     cover_image = models.URLField(blank=True, null=True)
-    pub_date = models.DateTimeField()
+    pub_date = models.DateField()
     content = models.TextField()
     favorited = models.ManyToManyField(User, related_name="favorite_news", blank=True)
     tags = models.ManyToManyField(Tag, related_name="news")

@@ -1,0 +1,46 @@
+
+			<!--video-list-->
+			<div class="video-2017" id="videoList0" ></div>
+			<script>
+				SINA_TEXT_PAGE_INFO['videoDatas0'] = [						{
+							ad_state: '1',
+							pid: '1',
+							video_id: 260101256,	//vid
+							pic: '//n.sinaimg.cn/sinacn08/0/w1024h576/20180710/2ff2-hezpzwu4909408.jpg',		//节目列表小图
+							thumbUrl: '//n.sinaimg.cn/sinacn08/0/w1024h576/20180710/2ff2-hezpzwu4909408.jpg',	//html5播放器上视频还未开始播显示的图片，可与pic相同
+							title: '公交司机提醒上车老汉往后走，反遭拳殴',	//标题
+							source: '',	//视频发布来源。如：新华网。
+							url: 'http://k.sina.cn/article_6275620474_m1760e5e7a020008j65.html?from=news&subch=onews'
+						}];
+				SinaPage.loadWidget({
+					trigger: {
+					id: 'videoList0'
+					},
+				require:[
+				{
+					url: "//sjs2.sinajs.cn/video/sinaplayer/js/page/player_v1.js"
+				},
+				{
+					url: "//finance.sina.com.cn/other/src/sinaPageVideo2017.js"
+				}
+				],
+				onAfterLoad: function () {
+					new SinaPageVideo({ 
+						 wrap:'videoList0',//播放器外层id 
+		 				videoList:SINA_TEXT_PAGE_INFO['videoDatas0']
+				 });
+			}
+			});
+		</script>
+		<!--/video-list-->
+<p>　　7月8日，福建漳州。一6旬老汉上公交车后，司机提醒他往后走，不要站在门口影响其他乘客上车。不料老汉却连续对司机头部胸部击打，并推搡其他乘客。目前警方已介入调查。</p>
+<p>　　澎湃新闻记者：陆鸣&nbsp;</p>
+				
+				  
+				
+				
+<p class="show_author">责任编辑：张申 </p>
+				
+				
+			</div>
+			<!-- 正文 end -->
