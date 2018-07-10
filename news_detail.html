@@ -53,7 +53,7 @@
                         </li>
                         {{topleftbar}}
                     </ul>
-                    <form class="form-inline my-2 my-lg-0 search-form">
+                    <form class="form-inline my-2 my-lg-0 search-form" onsubmit="submitVal(this)">
                         <input
                             id="search-content"
                             class="form-control mr-sm-2"
@@ -105,7 +105,7 @@
                                         <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
                                     </button>
             
-                                    <span>{{news.favorited.count}}</span>
+                                    <span id="love-span">{{news.favorited.count}}</span>
                                     人收藏
                                 </div>
                                 <div class="col-4"></div>
@@ -117,13 +117,14 @@
                                 <div class="row">
                                     <div class="input-group mb-3 comment-form">
                                         <input
+                                            id="comment-content"
                                             type="text"
                                             class="form-control"
                                             placeholder="在这里填写你的评论"
                                             aria-label="Recipient's content"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button">提交</button>
+                                            <button class="btn btn-outline-secondary" type="button" onclick="commentAction()">提交</button>
                                         </div>
                                     </div>
                                 </div>
@@ -172,12 +173,14 @@
                     </div>
                 </div>
             </main>
-            <script src="js/jquery-3.2.1.slim.min.js"></script>
+            <script src="js/jquery-3.3.1.min.js"></script>
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
+            <script src="js/search.js"></script>
             <script>
                 var loveFlag; 
                 var xmlhttp;
+                var loveNum = $('#love-span').val();
                $(function(){
                     
 
@@ -213,12 +216,27 @@
                 function loveChange(){
                     if(loveFlag==0){
                         loveFlag = 1;
+                        loveNum = loveNum + 1;
+                        $('#love-span').text(loveNum);
                     }
                     else{
                         loveFlag = 0;
+                        loveNum = loveNum - 1; 
+                        $('#love-span').text(loveNum);
                     }
                     xmlhttp.open("GET","{% url 'news-favorited' news.id %}/" + loveFlag.toString(),true);
                     xmlhttp.send();
+                }
+                function commentAction(){
+                    var commentContent = $('#comment-content').val();
+                    if(commentContent == "")
+                        alert("Plz input comment content");
+                    else {
+                        xml.open("GET","#url",true);
+                        xml.send();
+
+                        $('#comment-content').val("");
+                    }
                 }
             </script>
         </body>
