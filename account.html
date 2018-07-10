@@ -241,7 +241,7 @@
 						<br/>
 						<!--个人信息表单-->
 						<h3 class="p-3">修改电子邮件</h3>
-						<form>
+						<form id="email-change">
 							<div class="form-group col-md-6">
 								<label for="inputAddress">电子邮件地址</label>
 								<input type="text" class="form-control" id="inputEmail" placeholder="请输入新的电子邮件地址">
@@ -531,6 +531,11 @@
 		var editor = new E('#editor0')
 		editor.customConfig.uploadImgShowBase64 = true
 		editor.create()
+	</script>
+	<script>
+		$("form#email-change").submit(function(e){
+			alert("email-changed");
+		});
 	</script>
 </body>
 
