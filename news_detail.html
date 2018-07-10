@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/starter-template.css" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">
+    <link href="css/news_detail.css" rel="stylesheet">
     <style>
         body {
             background-color: #f6f6f6;
@@ -64,7 +65,7 @@
         <main class="container">
             <div class="row">
 
-                <div class="col-md-9 order-md-1">
+                <div class="col col-md-9 order-md-1">
                     <div class="p-3">
                         <div class="row p-3 article">
                             <div class="blog-post">
@@ -72,8 +73,10 @@
                                 <p class="blog-post-meta">
                                     {{news.pub_date}} by {{news.pub_user}}
                                 </p>
+                                
                                 <hr>
                                 {{ news.content | safe }}
+                                
                                 <hr>
                             </div>
                         </div>
@@ -81,10 +84,10 @@
                         <div class="row p-3 mb-3">
                             <div class="col-4"></div>
                             <div class="col-4">
-                                <a href="#love">
+                                <button  type="button" class="btn btn-primary love-btn" data-toggle="button" aria-pressed="false" autocomplete="off">
                                     <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
-                                </a>
-                                <span>{{news.favorited.count}}</span>人收藏
+                                </button>
+                                <span>{{news.favorited.count}}</span> 人收藏
                             </div>
                             <div class="col-4"></div>
                         </div>
@@ -127,7 +130,7 @@
                     <!-- Comment list end -->
                     <!-- Comment apart end -->
                 </div>
-                <div class="col-md-3 order-md-2 mb-4 p-3">
+                <div class="col col-md-3 order-md-2 mb-4 p-3">
                     <div class="love-list p-4">
                         <h4>
                             <span class="text-muted">您感兴趣</span>
