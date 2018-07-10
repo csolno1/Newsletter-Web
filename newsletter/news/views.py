@@ -15,6 +15,7 @@ class NewsList(ListView):
         context['cur_tag'] = None
         context['login_in'] = self.request.user.is_authenticated
         return context
+
     
 class NewsTagDetail(DetailView):
     model = Tag

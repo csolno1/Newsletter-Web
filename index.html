@@ -72,13 +72,6 @@
 						{% endif %}
 					</li>
 				{% endfor %}
-				<li class="nav-item">
-					{% if favorite_tag %}
-						<a class="nav-link text-dark active show" href="{% url 'index' %}" aria-selected="true">收藏夹</a> 
-					{% else %}
-						<a class="nav-link text-dark" href="{% url 'index' %}" aria-selected="false">收藏夹</a> 
-					{% endif %}
-				</li>
 			</ul>
 		</ul>
 		<br/>
