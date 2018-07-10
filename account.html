@@ -280,10 +280,6 @@
 								<label for="inputAddress">电子邮件地址</label>
 								<input type="text" class="form-control" id="inputEmail" placeholder="请输入您的电子邮件地址">
 							</div>
-							<div class="form-group">
-								<label for="inputDescription">自我描述</label>
-								<input type="text" class="form-control" id="inputDescription" placeholder="a word to describe yourself">
-							</div>
 							<label for="checkbox">偏好标签</label>
 							<div class="form-group row" id="checkbox">
 								<div class="col-6">
@@ -328,13 +324,13 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<button type="submit" class="btn btn-primary btn-lg btn-block my-2">确认</button>
+								<button type="submit" class="btn btn-primary btn-lg btn-block my-2">确认修改</button>
 							</div>
 						</form>
 						<h3 class="p-3">修改密码</h3>
 						<div class="col-md-6">
 							<div class="alert alert-light alert-dismissible fade show" role="alert">
-								<strong>需要输入您的现有密码</strong>
+								<strong>提示：需要输入您的现有密码</strong>
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -359,11 +355,12 @@
 							</div>
 							<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
 						</div>
+						<label for="Picture-url">您的封面图片URL链接</label>
 						<div class="input-group mb-3">
-							<div class="custom-file">
-								<input type="file" class="custom-file-input" id="customFile">
-								<label class="custom-file-label" for="customFile">选择封面图片</label>
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="Picture-addon">https://</span>
 							</div>
+							<input type="text" class="form-control" id="Picture-url" aria-describedby="Picture-addon">
 						</div>
 						<!--多选标签-->
 						<div class="input-group mb-3">

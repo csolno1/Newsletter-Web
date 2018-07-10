@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 
 <head>
-    <title>个人主页</title>
+    <title>文章审查</title>
     <meta charset="utf-8">
     <link rel="icon" href="images/icon-32.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,6 +14,18 @@
 
         h2 {
             color: #007bff;
+        }
+
+        main {
+            background-color: #ffffff;
+        }
+
+        span.badge {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
         }
     </style>
 </head>
@@ -51,6 +63,37 @@
     </nav>
     <!--navbar end-->
     <main class="container">
+        <div class="row">
+            <div class="col col-md-9 order-md-1">
+                <div class="p-3">
+                    <div class="row p-3 article">
+                        <div class="blog-post">
+                            <h2 class="blog-post-title">{{news.title}}</h2>
+                            <p class="blog-post-meta">
+                                {{news.pub_date}} by {{news.pub_user}}
+                            </p>
+                            <hr> {{ news.content | safe }}
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comment list end -->
+                <!-- Comment apart end -->
+            </div>
+            <div class="col col-md-3 order-md-2 mb-4 p-3">
+                <ul>
+                    <li>
+                        <span class="badge badge-primary mt-4 mb-4">未审查</span>
+                    </li>
+                    <li>
+                        <div class=" btn-group-vertical">
+                            <button class="btn btn-outline-primary my-2" type="submit">通过</button>
+                            <button class="btn btn-outline-secondary my-2" type="submit">暂不通过</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
