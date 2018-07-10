@@ -11,7 +11,7 @@
         <link href="css/news_detail.css" rel="stylesheet">
         <style>
             body {
-                background-color: #f6f6f6;
+                background-color: #ffffff;
             }
 
             main {
@@ -53,8 +53,9 @@
                         </li>
                         {{topleftbar}}
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+                    <form class="form-inline my-2 my-lg-0 search-form">
                         <input
+                            id="search-content"
                             class="form-control mr-sm-2"
                             type="text"
                             placeholder="您感兴趣的新闻"
@@ -71,13 +72,13 @@
 
                     <div class="col col-md-9 order-md-1">
                         <div class="p-3">
-                            <div class="row p-3 article">
+                            <div class="row p-3 article" style="background:rgb(255, 255, 255)">
                                 <div class="blog-post">
                                     <h2 class="blog-post-title">{{news.title}}</h2>
                                     <p class="blog-post-meta">
                                         {{news.pub_date}}
                                         by
-                                        {{news.author}}
+                                        {{news.author}} {% for tag in news.tags.all %}{{tag.name}} {% endfor %}
                                     </p>
 
                                     <hr>
@@ -99,7 +100,8 @@
                                         data-toggle="button"
                                         aria-pressed="false"
                                         autocomplete="off"
-                                        onclick="loveChange()">
+                                        onclick="loveChange()"
+                                        style="border:none";>
                                         <img src="images/baseline_favorite_black_18dp.png" width="27dp" height="27dp">
                                     </button>
             
@@ -127,7 +129,16 @@
                                 </div>
                             </div>
                             <!-- Comment list begin -->
+                            {% else %}
+                            <div class="row p-3 mb-3">
+                                    <div class="col-4"></div>
+                                    <div class="col-5">
+                                        <a href="login.html">点击我进行登录以收藏与评论新闻</a>
+                                    </div>
+                                    <div class="col-3"></div>
+                            </div>
                             {% endif %}
+                            
                             <div class="mb-3 p-2">
 
                                 <hr>
@@ -145,10 +156,10 @@
                         <!-- Comment list end -->
                         <!-- Comment apart end -->
                     </div>
-                    <div class="col col-md-3 order-md-2 mb-4 p-3">
-                        <div class="love-list p-4">
+                    <div class="col col-md-3 order-md-2 mb-4 p-3" >
+                        <div class="love-list p-4" style="background:rgb(196, 195, 195)">
                             <h4>
-                                <span class="text-muted">您感兴趣</span>
+                                <spa>您感兴趣</span>
                             </h4>
                             <div class="container">
                                 {% for relative_news in relative_news_list %}
@@ -164,7 +175,52 @@
             <script src="js/jquery-3.2.1.slim.min.js"></script>
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
-            <script src="js/news_details.js"></script>>
+            <script>
+                var loveFlag; 
+                var xmlhttp;
+               $(function(){
+                    
+
+                    $(function(){
+                        if(window.XMLHttpRequest)
+                        {
+                            xmlhttp = new XMLHttpRequest();
+                        }
+                        else{
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange = function(){
+                            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                                if(xmlhttp.responseText==0)
+                                {
+                                    loveFlag = 0;
+                                    $('#love-btn').button('dispose');
+                                }
+                                if(xmlhttp.responseText==1)
+                                {
+                                    loveFlag = 1;
+                                    $('#love-btn').button('toggle');
+                                }
+                            }
+                        }
+                        xmlhttp.open("GET","{% url 'news-favorited' news.id %}",true);
+                        xmlhttp.send();
+                    });
+                    
+                 
+                });
+
+                function loveChange(){
+                    if(loveFlag==0){
+                        loveFlag = 1;
+                    }
+                    else{
+                        loveFlag = 0;
+                    }
+                    xmlhttp.open("GET","{% url 'news-favorited' news.id %}/" + loveFlag.toString(),true);
+                    xmlhttp.send();
+                }
+            </script>
         </body>
 
     </html>
