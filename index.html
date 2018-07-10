@@ -66,28 +66,27 @@
 			</li>
 			<ul class="nav justify-content-end">
 				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="true">时讯</a>
+					{% if all_tag %}
+						<a class="nav-link text-dark active show" href="{% url 'index' %}" aria-selected="true">时讯</a> 
+					{% else %}
+						<a class="nav-link text-dark" href="{% url 'index' %}" aria-selected="false">时讯</a> 
+					{% endif %}
 				</li>
+				{% for tag in tags %}
+					<li class="nav-item">
+						{% if tag == cur_tag %}
+						<a class="nav-link text-dark active show" href="{% url 'tag-detail' tag.id %}" aria-selected="true">{{tag.name}}</a>
+						{% else %}
+						<a class="nav-link text-dark" href="{% url 'tag-detail' tag.id %}" aria-selected="false">{{tag.name}}</a>
+						{% endif %}
+					</li>
+				{% endfor %}
 				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">全球</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">政治</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">科技</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">科学</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">体育</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">健康</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">收藏夹</a>
+					{% if favorite_tag %}
+						<a class="nav-link text-dark active show" href="{% url 'index' %}" aria-selected="true">收藏夹</a> 
+					{% else %}
+						<a class="nav-link text-dark" href="{% url 'index' %}" aria-selected="false">收藏夹</a> 
+					{% endif %}
 				</li>
 			</ul>
 		</ul>

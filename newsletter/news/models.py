@@ -2,6 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+class Tag(models.Model):
+    name_choice = [
+        ("全球", "全球"),
+        ("政治", "政治"),
+        ("科技", "科技"),
+        ("科学", "科学"),
+        ("体育", "体育"),
+        ("健康", "健康"),
+    ]
+    name = models.CharField(max_length=10, choices=name_choice)
+    def __str__(self):
+        return self.name
+    def default(self):
+        return Tag.objects.get(name="全球")
+
 class News(models.Model):
     title = models.CharField(max_length=40)
     pub_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="pub_news")
@@ -10,8 +25,10 @@ class News(models.Model):
     pub_date = models.DateTimeField()
     content = models.TextField()
     favorited = models.ManyToManyField(User, related_name="favorite_news", blank=True)
+    tags = models.ManyToManyField(Tag, related_name="news")
     def __str__(self):
         return self.title
+
 
 
 
