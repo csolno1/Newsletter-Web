@@ -249,10 +249,8 @@
                     else{
                         loveFlag = 0;
                     }
-                    alert("{% url 'news-favorited' news.id %}/" + loveFlag.toString());
                     xmlhttp.open("GET","{% url 'news-favorited' news.id %}/" + loveFlag.toString(),true);
                     xmlhttp.send();
-                    alert("Test2");
                 }
             </script>
         </body>
