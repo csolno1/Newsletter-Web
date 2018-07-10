@@ -72,34 +72,37 @@
     -->
 	<main class="container">
 		<!-- This is nav -->
-		<ul class="nav nav-tabs flex-column">
+		<ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
 			<br/>
-			<li class="nav-item">
+			<li>
 				<h1 class="display-2">
-					<a id="myTitle" href="{% url 'index' %}">时讯</a>
+					时讯
 				</h1>
 			</li>
 			<ul class="nav justify-content-end">
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">全球</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="true">时讯</a> 
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">政治</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">全球</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">科技</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">政治</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">科学</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">科技</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">体育</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">科学</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">健康</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">体育</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">收藏夹</a>
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">健康</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-dark" data-toggle="tab" href="#" role="tab" aria-controls="false">收藏夹</a>
 				</li>
 			</ul>
 		</ul>
