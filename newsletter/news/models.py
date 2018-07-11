@@ -48,6 +48,8 @@ class ReadRecord(models.Model):
     news = models.ForeignKey(News, on_delete=models.CASCADE, related_name="read_records")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="read_records")
     time = models.DateTimeField(null=True)
+    class Meta:
+        ordering = ['-time']
 
 from django.dispatch import receiver
 from django.db.models.signals import post_save
