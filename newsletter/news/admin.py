@@ -17,3 +17,6 @@ class CommentAdmin(admin.ModelAdmin):
 @admin.register(models.Checkable)
 class CheckableAdmin(admin.ModelAdmin):
     pass
+@admin.register(models.ReadRecord)
+class ReadRecordAdmin(admin.ModelAdmin):
+    pass
