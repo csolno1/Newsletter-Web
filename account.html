@@ -579,8 +579,13 @@
 						"article":editor.txt.html()
 					}
 					alert(editor.txt.html())
-					xmlhttp.open("POST","#URL",true);
-					xml.send();
+					$http.post("url",postData).success(function(result){
+						if(result==true)
+							alert("提交成功");
+						else 
+							alert("提交失败");
+					})
+
 				}
             }
         </script>
