@@ -52,8 +52,9 @@
             {% for news in news_list %}
             <li class="media my-4">
                 {% if news.cover_image %}
-                <img data-src="holder.js/200x200" class="rounded float-left mr-3" alt="200x200" src="{{news.cover_image}}" data-holder-rendered="true"
-                    style="width: 100px; height: 100px;"> {% endif %}
+                <img data-src="holder.js/200x200" class="rounded float-left mr-3" alt="200x200" src="{{news.cover_image}}"
+                    data-holder-rendered="true" style="width: 100px; height: 100px;">
+                {% endif %}
                 <div class="media-body">
                     <h3 class="mt-0">
                         <a href="{% url 'news-details' news.id %}">{{news.title}}</a>
