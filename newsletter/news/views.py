@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import News, Tag, Comment
+from .models import News, Tag, Comment, ReadRecord
 # Create your views here.
 
 class NewsList(ListView):
@@ -70,11 +70,17 @@ def register(request):
         return render(request, 'news/register.html')
 
 from django.db.models import Count
+from datetime import datetime
 class NewsDetail(DetailView):
     model = News
     template_name = "news/news_detail.html"
     context_object_name = "news"
     def get_context_data(self, **kwargs):
+        news = self.get_object()
+        if(self.request.user.is_authenticated):
+            rr, _ = ReadRecord.objects.get_or_create(news=news, user=self.request.user)
+            rr.time = datetime.now()
+            rr.save()
         context = super().get_context_data(**kwargs)
         context['login_in'] = self.request.user.is_authenticated
         cur_news = self.get_object()
