@@ -36,10 +36,10 @@
                     </li>
                     {{topleftbar}}
                 </ul>
-				<form class="form-inline my-2 my-lg-0" onsubmit="return submitVal(this);" href="/login">
-					<input id="search-content" class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
-					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mySearch">搜索</button>
-				</form>
+                <form class="form-inline my-2 my-lg-0" onsubmit="return submitVal(this);" href="/login">
+                    <input id="search-content" class="form-control mr-sm-2" type="text" placeholder="您感兴趣的新闻" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mySearch">搜索</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -58,13 +58,13 @@
                 </div>
             </div>
         </form>
+        {% if news_list.count == 0 %}
         <ul class="list-unstyled">
             {% for news in news_list %}
             <li class="media my-4">
                 {% if news.cover_image %}
-                <img data-src="holder.js/200x200" class="rounded float-left mr-3" alt="200x200" src="{{news.cover_image}}"
-                    data-holder-rendered="true" style="width: 100px; height: 100px;">
-                {% endif %}
+                <img data-src="holder.js/200x200" class="rounded float-left mr-3" alt="200x200" src="{{news.cover_image}}" data-holder-rendered="true"
+                    style="width: 100px; height: 100px;"> {% endif %}
                 <div class="media-body">
                     <h3 class="mt-0">
                         <a href="{% url 'news-details' news.id %}">{{news.title}}</a>
@@ -73,6 +73,17 @@
             </li>
             {% endfor %}
         </ul>
+        {% else %}
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <strong class="display-4">
+                    <span class="badge badge-pill badge-primary">搜的内容很特别，暂时没有搜索结果</span>
+                </strong>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        {% endif %}
     </main>
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
