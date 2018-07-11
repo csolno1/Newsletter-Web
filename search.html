@@ -58,7 +58,7 @@
                 </div>
             </div>
         </form>
-        {% if news_list.count == 0 %}
+        {% if news_list.count != 0 %}
         <ul class="list-unstyled">
             {% for news in news_list %}
             <li class="media my-4">
