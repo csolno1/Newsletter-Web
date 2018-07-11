@@ -4,9 +4,9 @@ from .models import News, Tag, Comment, ReadRecord
 # Create your views here.
 
 class NewsList(ListView):
-    model = News
     template_name = "news/index.html"
     context_object_name = "manyNews"
+    queryset = News.objects.filter(review_pass=True)
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['tags'] = Tag.objects.all()
@@ -26,7 +26,7 @@ class NewsTagDetail(DetailView):
         context['tags'] = Tag.objects.all()
         context['all_tag'] = False
         context['favorite_tag'] = False
-        context['manyNews'] = super().get_object().news.all()
+        context['manyNews'] = super().get_object().news.filter(review_pass=True)
         context['login_in'] = self.request.user.is_authenticated
         return context
 
@@ -53,6 +53,7 @@ def login(request):
     form = LoginForm()
     return render(request, 'news/login.html', {'form' : form})
 
+
 def register(request):
     from .forms import RegisterForm
     if(request.method == "POST"):
@@ -72,7 +73,7 @@ def register(request):
 from django.db.models import Count
 from datetime import datetime
 class NewsDetail(DetailView):
-    model = News
+    queryset = News.objects.filter(review_pass=True)
     template_name = "news/news_detail.html"
     context_object_name = "news"
     def get_context_data(self, **kwargs):
@@ -110,7 +111,6 @@ def home(request):
     return http.HttpResponseRedirect(reverse("index"))
 
 def favroite_news(request, pk):
-    import json
     if(request.user.is_authenticated):
         news = News.objects.get(id=pk)
         if(news != None):
@@ -118,6 +118,17 @@ def favroite_news(request, pk):
                 return http.HttpResponse("1")
     return http.HttpResponse("0")
 
+def publish_news(request):
+    if(not request.user.is_authenticated or request.method != "POST"):
+        return http.HttpResponseForbidden()
+    from json import loads
+    data = loads(request.body)
+    tags = Tag.objects.filter(name__in=data['labal'])
+    newNews = News.objects.create(title=data['title'], pub_user=request.user, author=request.user.username, cover_image=data['PicUrl'], pub_date = datetime.now().date, content=data['article'], review_pass=False)
+    newNews.tags.set(tags)
+    newNews.save()
+    return http.HttpResponse("1")
+    
 def favorite_news_post(request, pk, f):
     if(not request.user.is_authenticated):
         return http.HttpResponseForbidden()
